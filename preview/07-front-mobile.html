@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=375">
+<title>Margin — Front Page Mobile (375px)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="margin-preview.css">
+<style>
+  /* Mobile overrides */
+  .mg-header { padding-block: 0.875rem; position: sticky; top: 0; }
+  .mg-header__inner { gap: 0; }
+  .mg-nav, .mg-cta-btn { display: none; }
+  .mg-hamburger { display: flex; }
+  .mg-ticker__inner { gap: 1rem; }
+  .mg-ticker__items { gap: 1.25rem; }
+</style>
+</head>
+<body>
+
+<!-- Mobile ticker -->
+<div class="mg-ticker" style="padding-inline: 1rem;">
+  <div style="display: flex; align-items: center; gap: 1rem; font-family: var(--wp--preset--font-family--mono); font-size: 0.625rem; overflow-x: auto; scrollbar-width: none;">
+    <span style="color: var(--wp--preset--color--ink-faint); letter-spacing: 0.1em; text-transform: uppercase; flex-shrink: 0; font-weight: 600;">MKT</span>
+    <span style="white-space: nowrap; display: flex; gap: 0.375rem; flex-shrink: 0;"><span style="color: var(--wp--preset--color--ink-faint);">TSX</span><span style="color: var(--wp--preset--color--ground);">21,847</span><span style="color: #4caf7d;">+0.42%</span></span>
+    <span style="white-space: nowrap; display: flex; gap: 0.375rem; flex-shrink: 0;"><span style="color: var(--wp--preset--color--ink-faint);">SPX</span><span style="color: var(--wp--preset--color--ground);">5,304</span><span style="color: #4caf7d;">+0.18%</span></span>
+    <span style="white-space: nowrap; display: flex; gap: 0.375rem; flex-shrink: 0;"><span style="color: var(--wp--preset--color--ink-faint);">GOLD</span><span style="color: var(--wp--preset--color--ground);">2,341</span><span style="color: #4caf7d;">+0.67%</span></span>
+    <span style="white-space: nowrap; display: flex; gap: 0.375rem; flex-shrink: 0;"><span style="color: var(--wp--preset--color--ink-faint);">CAD</span><span style="color: var(--wp--preset--color--ground);">1.3641</span><span style="color: #ef5350;">−0.12%</span></span>
+  </div>
+</div>
+
+<!-- Mobile header -->
+<header class="mg-header">
+  <div style="display: flex; align-items: center; justify-content: space-between; padding-inline: 1rem;">
+    <a class="mg-site-name" href="#" style="font-size: 1.125rem;">Margin Capital</a>
+    <div class="mg-hamburger" style="display: flex;">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- Hero — mobile -->
+<section style="background: var(--wp--preset--color--paper); border-bottom: 1px solid var(--wp--preset--color--rule); padding: 2rem 1.25rem;">
+  <div class="mg-eyebrow" style="font-size: 0.625rem;">Q2 2025 Sector Review</div>
+  <h1 style="font-family: var(--wp--preset--font-family--serif); font-size: 2rem; font-weight: 300; letter-spacing: -0.025em; line-height: 1.1; color: var(--wp--preset--color--ink-deep); margin-bottom: 1rem;">Infrastructure &amp; Capital Deployment in a Rate-Normalising Cycle</h1>
+  <p style="font-family: var(--wp--preset--font-family--sans); font-size: 0.9375rem; line-height: 1.65; color: var(--wp--preset--color--ink-muted); margin-bottom: 1.25rem;">Sector allocations have shifted as BoC signals a second cut. Our Q2 model tracks where institutional capital is moving.</p>
+  <div style="display: flex; gap: 0.75rem; font-family: var(--wp--preset--font-family--mono); font-size: 0.625rem; color: var(--wp--preset--color--ink-faint);">
+    <span>K. Ashworth</span><span>·</span><span>May 28, 2025</span><span>·</span><span>12 min</span>
+  </div>
+</section>
+
+<!-- Mobile data table — condensed -->
+<section style="background: var(--wp--preset--color--white); padding: 1.5rem 1.25rem; border-bottom: 1px solid var(--wp--preset--color--rule);">
+  <div class="mg-eyebrow" style="font-size: 0.625rem; margin-bottom: 0.75rem;">Sector Performance — YTD</div>
+  <table class="mg-data-table" style="font-size: 0.6875rem;">
+    <thead>
+      <tr>
+        <th style="font-size: 0.5625rem;">Sector</th>
+        <th style="font-size: 0.5625rem;">YTD</th>
+        <th style="font-size: 0.5625rem;">Signal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="mg-ticker-cell" style="font-size: 0.75rem;">Energy</td>
+        <td class="mg-positive">+14.2%</td>
+        <td>Overweight</td>
+      </tr>
+      <tr>
+        <td class="mg-ticker-cell" style="font-size: 0.75rem;">Financials</td>
+        <td class="mg-positive">+8.7%</td>
+        <td>Neutral</td>
+      </tr>
+      <tr>
+        <td class="mg-ticker-cell" style="font-size: 0.75rem;">Materials</td>
+        <td class="mg-positive">+11.3%</td>
+        <td>Overweight</td>
+      </tr>
+      <tr>
+        <td class="mg-ticker-cell" style="font-size: 0.75rem;">Technology</td>
+        <td class="mg-positive">+17.8%</td>
+        <td>Overweight</td>
+      </tr>
+      <tr>
+        <td class="mg-ticker-cell" style="font-size: 0.75rem;">Utilities</td>
+        <td class="mg-negative">−3.4%</td>
+        <td>Underweight</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Metrics 2×2 -->
+<section style="background: var(--wp--preset--color--ground); padding: 1.5rem 1.25rem; border-bottom: 1px solid var(--wp--preset--color--rule);">
+  <div class="mg-eyebrow" style="font-size: 0.625rem; margin-bottom: 0.875rem;">Model Portfolio</div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--wp--preset--color--rule);">
+    <div style="background: var(--wp--preset--color--white); padding: 1.25rem; border-right: 1px solid var(--wp--preset--color--rule); border-bottom: 1px solid var(--wp--preset--color--rule);">
+      <div style="font-family: var(--wp--preset--font-family--mono); font-size: 0.5625rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--wp--preset--color--ink-faint); margin-bottom: 0.375rem;">YTD Return</div>
+      <div style="font-family: var(--wp--preset--font-family--mono); font-size: 1.75rem; color: var(--wp--preset--color--positive);">+14.3%</div>
+    </div>
+    <div style="background: var(--wp--preset--color--white); padding: 1.25rem; border-bottom: 1px solid var(--wp--preset--color--rule);">
+      <div style="font-family: var(--wp--preset--font-family--mono); font-size: 0.5625rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--wp--preset--color--ink-faint); margin-bottom: 0.375rem;">vs Benchmark</div>
+      <div style="font-family: var(--wp--preset--font-family--mono); font-size: 1.75rem; color: var(--wp--preset--color--positive);">+2.1%</div>
+    </div>
+    <div style="background: var(--wp--preset--color--white); padding: 1.25rem; border-right: 1px solid var(--wp--preset--color--rule);">
+      <div style="font-family: var(--wp--preset--font-family--mono); font-size: 0.5625rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--wp--preset--color--ink-faint); margin-bottom: 0.375rem;">Sharpe Ratio</div>
+      <div style="font-family: var(--wp--preset--font-family--mono); font-size: 1.75rem; color: var(--wp--preset--color--ink-deep);">1.42</div>
+    </div>
+    <div style="background: var(--wp--preset--color--white); padding: 1.25rem;">
+      <div style="font-family: var(--wp--preset--font-family--mono); font-size: 0.5625rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--wp--preset--color--ink-faint); margin-bottom: 0.375rem;">Beta</div>
+      <div style="font-family: var(--wp--preset--font-family--mono); font-size: 1.75rem; color: var(--wp--preset--color--ink-deep);">0.87</div>
+    </div>
+  </div>
+</section>
+
+<!-- Recent research cards -->
+<section style="padding: 1.5rem 1.25rem; background: var(--wp--preset--color--white); border-bottom: 1px solid var(--wp--preset--color--rule);">
+  <div class="mg-eyebrow" style="font-size: 0.625rem; margin-bottom: 1rem;">Latest Research</div>
+  <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+    <div class="mg-research-card" style="padding: 1.25rem;">
+      <div class="mg-research-card__category" style="font-size: 0.5625rem;">Equity · Infrastructure REIT</div>
+      <a class="mg-research-card__title" href="#" style="font-size: 1rem;">Canadian Infrastructure REITs: A Valuation Reset Thesis</a>
+      <div class="mg-research-card__meta" style="font-size: 0.625rem;">May 28, 2025 &nbsp;·&nbsp; 34 pages &nbsp;·&nbsp; <span style="color: var(--wp--preset--color--accent);">OVERWEIGHT</span></div>
+    </div>
+    <div class="mg-research-card" style="padding: 1.25rem;">
+      <div class="mg-research-card__category" style="font-size: 0.5625rem;">Macro · Rates</div>
+      <a class="mg-research-card__title" href="#" style="font-size: 1rem;">The Bank of Canada's Communication Problem</a>
+      <div class="mg-research-card__meta" style="font-size: 0.625rem;">May 22, 2025 &nbsp;·&nbsp; 12 min read</div>
+    </div>
+    <div class="mg-research-card" style="padding: 1.25rem;">
+      <div class="mg-research-card__category" style="font-size: 0.5625rem;">Equity · Energy</div>
+      <a class="mg-research-card__title" href="#" style="font-size: 1rem;">Suncor Q1 2025: Free Cash Flow Inflection Confirmed</a>
+      <div class="mg-research-card__meta" style="font-size: 0.625rem;">May 14, 2025 &nbsp;·&nbsp; 18 pages &nbsp;·&nbsp; <span style="color: var(--wp--preset--color--accent);">BUY</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Subscribe CTA -->
+<section style="background: var(--wp--preset--color--accent); color: #fff; padding: 2rem 1.25rem; text-align: center;">
+  <div style="font-family: var(--wp--preset--font-family--mono); font-size: 0.625rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.65; margin-bottom: 0.75rem;">Margin Research</div>
+  <h2 style="font-family: var(--wp--preset--font-family--serif); font-size: 1.75rem; font-weight: 300; line-height: 1.2; margin-bottom: 1rem;">Independent research.<br>Transparent assumptions.</h2>
+  <a href="#" style="display: inline-block; background: #fff; color: var(--wp--preset--color--accent); font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.75rem 1.5rem; text-decoration: none;">Subscribe from $49/mo</a>
+</section>
+
+<footer style="background: var(--wp--preset--color--ink-deep); color: var(--wp--preset--color--ground); padding: 2rem 1.25rem;">
+  <div style="font-family: var(--wp--preset--font-family--serif); font-size: 1.5rem; font-weight: 300; letter-spacing: -0.02em; margin-bottom: 0.75rem;">Margin Capital Research</div>
+  <p style="font-family: var(--wp--preset--font-family--sans); font-size: 0.8125rem; color: rgba(245,243,238,0.55); line-height: 1.6; margin-bottom: 1.5rem;">Independent equity and fixed-income research.</p>
+  <div style="font-family: var(--wp--preset--font-family--mono); font-size: 0.625rem; color: rgba(245,243,238,0.3); padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">&copy; 2025 Margin Capital Research. For accredited investors only. Not investment advice.</div>
+  <div style="max-width: var(--mg-full-max); margin-inline: auto; font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; color: rgba(245,243,238,0.35); line-height: 1.6; margin-top: 0.5rem;">Built with WordPress &amp; <a href="https://thisismyurl.com/margin/">Margin</a></div>
+</footer>
+
+</body>
+</html>

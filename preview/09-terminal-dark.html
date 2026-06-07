@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1200">
+<title>Margin — Terminal Dark Variant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="margin-preview.css">
+<style>
+  /*
+   * TERMINAL DARK PALETTE — full inversion, amber accent.
+   * Evokes Bloomberg Terminal, financial data rooms, late-night analysis.
+   * Seven CSS custom property overrides in theme.json; same structure.
+   *
+   * Amber (#e6a817) on dark ground (#0a0c0e): 8.2:1 — WCAG AAA.
+   */
+  :root {
+    --wp--preset--color--ink-deep:    #f0ede6;
+    --wp--preset--color--ink-primary: #d8d4cb;
+    --wp--preset--color--ink-muted:   #9a9589;
+    --wp--preset--color--ink-faint:   #5a5650;
+    --wp--preset--color--rule:        #2a2620;
+    --wp--preset--color--rule-light:  #1e1b17;
+    --wp--preset--color--ground:      #111008;
+    --wp--preset--color--paper:       #0d0b07;
+    --wp--preset--color--white:       #141109;
+    --wp--preset--color--accent:      #e6a817;
+    --wp--preset--color--accent-tint: #1e1a0a;
+    --wp--preset--color--positive:    #4caf7d;
+    --wp--preset--color--negative:    #ef5350;
+  }
+
+  body { background: #0a0c0e; color: #d8d4cb; }
+  .mg-header { background: #0a0c0e; border-color: #2a2620; }
+  .mg-site-name { color: #f0ede6; }
+  .mg-nav a { color: #5a5650; }
+  .mg-nav a:hover, .mg-nav a.current { color: #e6a817; }
+  .mg-cta-btn { background: #e6a817; color: #0a0c0e; }
+  .mg-cta-btn:hover { background: #c4900f; }
+  .mg-ticker { background: #0a0c0e; border-bottom: 1px solid #2a2620; }
+  .mg-hero { background: #0d0b07; border-color: #2a2620; }
+  .mg-data-table caption { border-color: #e6a817; color: #5a5650; }
+  .mg-data-table thead th { color: #5a5650; border-color: #2a2620; }
+  .mg-data-table tbody tr { border-color: #1e1b17; }
+  .mg-data-table tbody tr:hover { background: #1e1a0a; }
+  .mg-data-table tbody td { color: #d8d4cb; }
+  .mg-data-table .mg-ticker-cell { color: #e6a817; }
+  .mg-market-panel { background: #0d0b07; border-color: #2a2620; }
+  .mg-market-panel__title { color: #5a5650; border-color: #2a2620; }
+  .mg-metrics-row { border-color: #2a2620; }
+  .mg-metric { background: #0d0b07; border-color: #2a2620; }
+  .mg-metric:hover { background: #1e1a0a; }
+  .mg-metric__label { color: #5a5650; }
+  .mg-metric__value { color: #f0ede6; }
+  .mg-footer { background: #070604; }
+  .mg-research-card { background: #0d0b07; border-color: #2a2620; }
+  .mg-research-card:hover { border-color: #e6a817; }
+  .mg-research-card__title { color: #f0ede6; }
+  .mg-research-card__category { color: #e6a817; }
+  .mg-research-card__meta { color: #5a5650; }
+  .mg-eyebrow { color: #e6a817; }
+</style>
+</head>
+<body>
+
+<div class="mg-ticker">
+  <div class="mg-ticker__inner">
+    <span class="mg-ticker__label">Markets</span>
+    <div class="mg-ticker__items">
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">TSX</span><span class="mg-ticker__value">21,847.3</span><span class="mg-ticker__change--pos">▲ +0.42%</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">S&amp;P 500</span><span class="mg-ticker__value">5,304.7</span><span class="mg-ticker__change--pos">▲ +0.18%</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">USD/CAD</span><span class="mg-ticker__value">1.3641</span><span class="mg-ticker__change--neg">▼ −0.12%</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">Gold</span><span class="mg-ticker__value">2,341.80</span><span class="mg-ticker__change--pos">▲ +0.67%</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">10Y CAD</span><span class="mg-ticker__value">3.74%</span><span class="mg-ticker__change--neg">▼ −4bps</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">WTI</span><span class="mg-ticker__value">78.44</span><span class="mg-ticker__change--pos">▲ +1.03%</span></span>
+    </div>
+  </div>
+</div>
+
+<header class="mg-header">
+  <div class="mg-header__inner">
+    <a class="mg-site-name" href="#">Margin Capital Research</a>
+    <nav class="mg-nav">
+      <a href="#" class="current">Research</a>
+      <a href="#">Markets</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Data</a>
+      <a href="#">About</a>
+    </nav>
+    <a class="mg-cta-btn" href="#">Subscribe</a>
+  </div>
+</header>
+
+<section class="mg-hero" style="padding-block: 3.5rem;">
+  <div class="mg-hero__inner">
+    <div class="mg-eyebrow">Terminal Dark · Colour Variant</div>
+    <h1 class="mg-hero__title" style="font-size: clamp(2.5rem, 4vw, 4.5rem); color: #f0ede6;">Portfolio Dashboard &amp; Data Room</h1>
+    <p class="mg-hero__sub">Same Margin structure. Same block patterns. Amber accent replaces blue. Seven CSS custom property overrides in theme.json — no structural changes. Suited to financial data tools, terminal-style dashboards, and late-night analysis workflows.</p>
+  </div>
+</section>
+
+<!-- Metrics -->
+<section class="mg-section" style="padding-block: 2rem; background: #111008;">
+  <div class="mg-constrained">
+    <div class="mg-metrics-row">
+      <div class="mg-metric">
+        <div class="mg-metric__label">Model Portfolio YTD</div>
+        <div class="mg-metric__value" style="font-size: 2rem; color: #4caf7d;">+14.3%</div>
+        <div class="mg-metric__change" style="color: #4caf7d;">vs benchmark +2.1%</div>
+      </div>
+      <div class="mg-metric">
+        <div class="mg-metric__label">Active Positions</div>
+        <div class="mg-metric__value" style="font-size: 2rem;">20</div>
+        <div class="mg-metric__change">equity + fi</div>
+      </div>
+      <div class="mg-metric">
+        <div class="mg-metric__label">Research Reports</div>
+        <div class="mg-metric__value" style="font-size: 2rem;">312</div>
+        <div class="mg-metric__change">since 2019</div>
+      </div>
+      <div class="mg-metric">
+        <div class="mg-metric__label">Subscribers</div>
+        <div class="mg-metric__value" style="font-size: 2rem;">4,800+</div>
+        <div class="mg-metric__change">professional</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Data table — dark -->
+<section class="mg-section" style="padding-block: 2.5rem; background: #0d0b07;">
+  <div class="mg-constrained">
+    <div class="mg-eyebrow" style="margin-bottom: 0.875rem;">Coverage Universe — Live Positions</div>
+    <table class="mg-data-table">
+      <caption>Model Portfolio — Equity Sleeve · 15 min delayed</caption>
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Name</th>
+          <th>Weight</th>
+          <th>Last</th>
+          <th>Day</th>
+          <th>YTD</th>
+          <th>Rating</th>
+          <th>Target</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mg-ticker-cell">SU</td>
+          <td>Suncor Energy</td>
+          <td>7.2%</td>
+          <td>$57.35</td>
+          <td class="mg-negative">−0.4%</td>
+          <td class="mg-positive">+18.7%</td>
+          <td>Buy</td>
+          <td>$68.00</td>
+        </tr>
+        <tr>
+          <td class="mg-ticker-cell">CNR</td>
+          <td>Canadian National Rail</td>
+          <td>7.9%</td>
+          <td>$174.20</td>
+          <td class="mg-positive">+1.1%</td>
+          <td class="mg-positive">+11.4%</td>
+          <td>Buy</td>
+          <td>$195.00</td>
+        </tr>
+        <tr>
+          <td class="mg-ticker-cell">AEM</td>
+          <td>Agnico Eagle Mines</td>
+          <td>6.1%</td>
+          <td>$82.45</td>
+          <td class="mg-positive">+1.8%</td>
+          <td class="mg-positive">+22.3%</td>
+          <td>Buy</td>
+          <td>$97.00</td>
+        </tr>
+        <tr>
+          <td class="mg-ticker-cell">BNS</td>
+          <td>Bank of Nova Scotia</td>
+          <td>8.4%</td>
+          <td>$63.48</td>
+          <td class="mg-positive">+0.6%</td>
+          <td class="mg-positive">+9.2%</td>
+          <td>Buy</td>
+          <td>$72.00</td>
+        </tr>
+        <tr>
+          <td class="mg-ticker-cell">WSP</td>
+          <td>WSP Global</td>
+          <td>5.3%</td>
+          <td>$240.15</td>
+          <td class="mg-positive">+0.8%</td>
+          <td class="mg-positive">+14.9%</td>
+          <td>Buy</td>
+          <td>$275.00</td>
+        </tr>
+        <tr>
+          <td class="mg-ticker-cell">CVT.UN</td>
+          <td>Corridor Value Trust</td>
+          <td>3.8%</td>
+          <td>$10.40</td>
+          <td class="mg-negative">−0.2%</td>
+          <td class="mg-negative">−2.1%</td>
+          <td>Hold</td>
+          <td>$11.20</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="8">15-minute delayed. Targets 12-month horizon. Not investment advice.</td></tr>
+      </tfoot>
+    </table>
+  </div>
+</section>
+
+<!-- Research cards -->
+<section class="mg-section" style="padding-block: 2.5rem; background: #111008;">
+  <div class="mg-constrained">
+    <div class="mg-eyebrow" style="margin-bottom: 1rem;">Latest Reports</div>
+    <div class="mg-research-grid">
+      <div class="mg-research-card">
+        <div class="mg-research-card__category">Equity · Infrastructure REIT</div>
+        <a class="mg-research-card__title" href="#">Canadian Infrastructure REITs: A Valuation Reset Thesis</a>
+        <div class="mg-research-card__meta">May 28, 2025 · 34 pages · OVERWEIGHT</div>
+        <span class="mg-research-card__tag">Buy Rating</span>
+      </div>
+      <div class="mg-research-card">
+        <div class="mg-research-card__category">Macro · Rates</div>
+        <a class="mg-research-card__title" href="#">The Bank of Canada's Communication Problem</a>
+        <div class="mg-research-card__meta">May 22, 2025 · 12 min</div>
+        <span class="mg-research-card__tag">Analysis</span>
+      </div>
+      <div class="mg-research-card">
+        <div class="mg-research-card__category">Equity · Energy</div>
+        <a class="mg-research-card__title" href="#">Suncor Q1 2025: Free Cash Flow Inflection Confirmed</a>
+        <div class="mg-research-card__meta">May 14, 2025 · 18 pages · BUY</div>
+        <span class="mg-research-card__tag">Earnings Update</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Palette note -->
+<div style="margin: 0; padding: 1.5rem; background: #0d0b07; border-top: 1px solid #2a2620; border-inline-start: 4px solid #e6a817;">
+  <div style="font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #e6a817; margin-bottom: 0.5rem;">About this palette</div>
+  <p style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; line-height: 1.65; color: #5a5650; max-width: 65ch;">
+    <strong style="color: #d8d4cb;">Terminal Dark</strong> — ground: #0a0c0e · ink-primary: #d8d4cb · accent: #e6a817 (amber). Seven CSS custom property overrides in theme.json. The IBM Plex Mono type system, financial table layout, and grid patterns are unchanged. Demonstrates how Margin serves Bloomberg-style terminals and financial data dashboards without any template edits.
+  </p>
+</div>
+
+<footer class="mg-footer" style="background: #070604;">
+  <div class="mg-footer__inner">
+    <div>
+      <div class="mg-footer__name">Margin Capital Research</div>
+      <p class="mg-footer__desc">Independent equity and fixed-income research for institutional and sophisticated investors.</p>
+    </div>
+    <div>
+      <div style="font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,243,238,0.25); margin-bottom: 1rem;">Research</div>
+      <nav style="display: flex; flex-direction: column; gap: 0.625rem;">
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.5); text-decoration: none;">Equity Reports</a>
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.5); text-decoration: none;">Fixed Income</a>
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.5); text-decoration: none;">Data Tables</a>
+      </nav>
+    </div>
+    <div>
+      <div style="font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,243,238,0.25); margin-bottom: 1rem;">Company</div>
+      <nav style="display: flex; flex-direction: column; gap: 0.625rem;">
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.5); text-decoration: none;">About</a>
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.5); text-decoration: none;">Subscribe</a>
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.5); text-decoration: none;">Disclosures</a>
+      </nav>
+    </div>
+  </div>
+  <div style="max-width: var(--mg-full-max); margin-inline: auto; font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; color: rgba(245,243,238,0.2);">
+    &copy; 2025 Margin Capital Research. For accredited investors only. Not investment advice.</div>
+  <div style="max-width: var(--mg-full-max); margin-inline: auto; font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; color: rgba(245,243,238,0.35); line-height: 1.6; margin-top: 0.5rem;">Built with WordPress &amp; <a href="https://thisismyurl.com/margin/">Margin</a></div>
+</footer>
+
+</body>
+</html>

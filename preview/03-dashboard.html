@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280">
+<title>Margin — Portfolio Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="margin-preview.css">
+</head>
+<body>
+
+<div class="mg-ticker">
+  <div class="mg-ticker__inner">
+    <span class="mg-ticker__label">Live</span>
+    <div class="mg-ticker__items">
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">TSX</span><span class="mg-ticker__value">21,847.3</span><span class="mg-ticker__change--pos">▲ +0.42%</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">S&amp;P 500</span><span class="mg-ticker__value">5,304.7</span><span class="mg-ticker__change--pos">▲ +0.18%</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">NASDAQ</span><span class="mg-ticker__value">16,782.4</span><span class="mg-ticker__change--pos">▲ +0.54%</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">10Y CAD</span><span class="mg-ticker__value">3.74%</span><span class="mg-ticker__change--neg">▼ −4bps</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">USD/CAD</span><span class="mg-ticker__value">1.3641</span><span class="mg-ticker__change--neg">▼ −0.12%</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">Gold</span><span class="mg-ticker__value">2,341.80</span><span class="mg-ticker__change--pos">▲ +0.67%</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">VIX</span><span class="mg-ticker__value">12.8</span><span class="mg-ticker__change--neg">▼ −0.4</span></span>
+    </div>
+  </div>
+</div>
+
+<header class="mg-header">
+  <div class="mg-header__inner">
+    <a class="mg-site-name" href="#">Margin Capital Research</a>
+    <nav class="mg-nav">
+      <a href="#">Research</a>
+      <a href="#" class="current">Markets</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Data</a>
+      <a href="#">About</a>
+    </nav>
+    <a class="mg-cta-btn" href="#">Subscribe</a>
+  </div>
+</header>
+
+<!-- Dashboard header -->
+<div style="background: var(--wp--preset--color--white); border-bottom: 1px solid var(--wp--preset--color--rule); padding-block: 1.75rem; padding-inline: var(--mg-gutter);">
+  <div class="mg-constrained">
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <div>
+        <div class="mg-eyebrow" style="margin-bottom: 0.375rem;">Portfolio Dashboard</div>
+        <h1 style="font-family: var(--wp--preset--font-family--serif); font-size: 2rem; font-weight: 300; letter-spacing: -0.02em;">Market Overview · May 28, 2025</h1>
+      </div>
+      <div style="font-family: var(--wp--preset--font-family--mono); font-size: 0.75rem; color: var(--wp--preset--color--ink-faint);">
+        Last updated 16:02 EDT &nbsp;·&nbsp; Delayed 15 min
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Four key metrics -->
+<section class="mg-section mg-section--ground" style="padding-block: 2rem;">
+  <div class="mg-constrained">
+    <div class="mg-metrics-row">
+      <div class="mg-metric">
+        <div class="mg-metric__label">Model Portfolio</div>
+        <div class="mg-metric__value" style="font-size: 2rem; color: var(--wp--preset--color--positive);">+14.3%</div>
+        <div class="mg-metric__change mg-metric__change--pos">YTD vs benchmark +2.1%</div>
+      </div>
+      <div class="mg-metric">
+        <div class="mg-metric__label">Beta</div>
+        <div class="mg-metric__value" style="font-size: 2rem;">0.87</div>
+        <div class="mg-metric__change">vs TSX Composite</div>
+      </div>
+      <div class="mg-metric">
+        <div class="mg-metric__label">Sharpe Ratio</div>
+        <div class="mg-metric__value" style="font-size: 2rem;">1.42</div>
+        <div class="mg-metric__change">trailing 12-month</div>
+      </div>
+      <div class="mg-metric">
+        <div class="mg-metric__label">Max Drawdown</div>
+        <div class="mg-metric__value" style="font-size: 2rem; color: var(--wp--preset--color--negative);">−6.2%</div>
+        <div class="mg-metric__change mg-metric__change--neg">Feb 2025 correction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Two data tables side by side -->
+<section class="mg-section mg-section--white" style="padding-block: 2.5rem;">
+  <div class="mg-constrained">
+    <div class="mg-cols-2">
+      <!-- Holdings table -->
+      <div>
+        <div class="mg-eyebrow" style="margin-bottom: 0.75rem;">Model Portfolio — Top Holdings</div>
+        <table class="mg-data-table">
+          <caption>Current Positions · 15 min delayed</caption>
+          <thead>
+            <tr>
+              <th>Symbol</th>
+              <th>Weight</th>
+              <th>Last</th>
+              <th>Day Chg</th>
+              <th>YTD</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mg-ticker-cell">BNS</td>
+              <td>8.4%</td>
+              <td>$63.48</td>
+              <td class="mg-positive">+0.6%</td>
+              <td class="mg-positive">+9.2%</td>
+            </tr>
+            <tr>
+              <td class="mg-ticker-cell">CNR</td>
+              <td>7.9%</td>
+              <td>$174.20</td>
+              <td class="mg-positive">+1.1%</td>
+              <td class="mg-positive">+11.4%</td>
+            </tr>
+            <tr>
+              <td class="mg-ticker-cell">SU</td>
+              <td>7.2%</td>
+              <td>$57.35</td>
+              <td class="mg-negative">−0.4%</td>
+              <td class="mg-positive">+18.7%</td>
+            </tr>
+            <tr>
+              <td class="mg-ticker-cell">RY</td>
+              <td>6.8%</td>
+              <td>$137.80</td>
+              <td class="mg-positive">+0.2%</td>
+              <td class="mg-positive">+7.8%</td>
+            </tr>
+            <tr>
+              <td class="mg-ticker-cell">AEM</td>
+              <td>6.1%</td>
+              <td>$82.45</td>
+              <td class="mg-positive">+1.8%</td>
+              <td class="mg-positive">+22.3%</td>
+            </tr>
+            <tr>
+              <td class="mg-ticker-cell">MFC</td>
+              <td>5.7%</td>
+              <td>$41.60</td>
+              <td class="mg-negative">−0.1%</td>
+              <td class="mg-positive">+6.4%</td>
+            </tr>
+            <tr>
+              <td class="mg-ticker-cell">WSP</td>
+              <td>5.3%</td>
+              <td>$240.15</td>
+              <td class="mg-positive">+0.8%</td>
+              <td class="mg-positive">+14.9%</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="5">15-minute delayed data. For informational purposes only.</td></tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <!-- Sector allocation + fixed income table -->
+      <div>
+        <div class="mg-eyebrow" style="margin-bottom: 0.75rem;">Fixed Income Sleeve</div>
+        <table class="mg-data-table">
+          <caption>Bond Holdings · Market Value Weights</caption>
+          <thead>
+            <tr>
+              <th>Issuer</th>
+              <th>Coupon</th>
+              <th>Maturity</th>
+              <th>YTM</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mg-ticker-cell">GOC 2Y</td>
+              <td>4.25%</td>
+              <td>Jun 2027</td>
+              <td>3.82%</td>
+              <td>1.94</td>
+            </tr>
+            <tr>
+              <td class="mg-ticker-cell">GOC 5Y</td>
+              <td>3.75%</td>
+              <td>Mar 2030</td>
+              <td>3.71%</td>
+              <td>4.67</td>
+            </tr>
+            <tr>
+              <td class="mg-ticker-cell">GOC 10Y</td>
+              <td>3.50%</td>
+              <td>Jun 2035</td>
+              <td>3.74%</td>
+              <td>8.92</td>
+            </tr>
+            <tr>
+              <td class="mg-ticker-cell">BMO 5Y</td>
+              <td>5.10%</td>
+              <td>Oct 2029</td>
+              <td>4.32%</td>
+              <td>4.21</td>
+            </tr>
+            <tr>
+              <td class="mg-ticker-cell">TD 3Y</td>
+              <td>4.90%</td>
+              <td>Nov 2028</td>
+              <td>4.18%</td>
+              <td>2.87</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="5">YTM = yield to maturity. Duration in years. Not investment advice.</td></tr>
+          </tfoot>
+        </table>
+
+        <!-- Terminal block -->
+        <div style="margin-top: 1.75rem; background: var(--wp--preset--color--ink-deep); color: var(--wp--preset--color--ground); padding: 1.25rem; font-family: var(--wp--preset--font-family--mono); font-size: 0.75rem; line-height: 1.85;">
+          <div style="color: var(--wp--preset--color--ink-faint); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem;">PORTFOLIO SUMMARY</div>
+          <div style="display: flex; justify-content: space-between;"><span style="color: var(--wp--preset--color--ink-faint);">Total Equity Weight</span><span style="color: #4caf7d;">72.4%</span></div>
+          <div style="display: flex; justify-content: space-between;"><span style="color: var(--wp--preset--color--ink-faint);">Fixed Income Weight</span><span>20.1%</span></div>
+          <div style="display: flex; justify-content: space-between;"><span style="color: var(--wp--preset--color--ink-faint);">Cash &amp; Equivalents</span><span>7.5%</span></div>
+          <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.625rem; padding-top: 0.625rem; display: flex; justify-content: space-between;"><span style="color: var(--wp--preset--color--ink-faint);">Portfolio YTD</span><span style="color: #4caf7d; font-weight: 600;">+14.3%</span></div>
+          <div style="display: flex; justify-content: space-between;"><span style="color: var(--wp--preset--color--ink-faint);">Benchmark YTD</span><span>+12.2%</span></div>
+          <div style="display: flex; justify-content: space-between;"><span style="color: var(--wp--preset--color--ink-faint);">Alpha</span><span style="color: #4caf7d;">+2.1%</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Macro table -->
+<section class="mg-section mg-section--ground" style="padding-block: 2.5rem;">
+  <div class="mg-constrained">
+    <div class="mg-eyebrow" style="margin-bottom: 0.75rem;">Macro Indicators</div>
+    <table class="mg-data-table">
+      <caption>Key Economic Releases — Canada &amp; US</caption>
+      <thead>
+        <tr>
+          <th>Indicator</th>
+          <th>Country</th>
+          <th>Period</th>
+          <th>Actual</th>
+          <th>Forecast</th>
+          <th>Prior</th>
+          <th>Surprise</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CPI YoY</td>
+          <td>Canada</td>
+          <td>Apr 2025</td>
+          <td>2.7%</td>
+          <td>2.8%</td>
+          <td>2.9%</td>
+          <td class="mg-positive">Beat</td>
+        </tr>
+        <tr>
+          <td>GDP QoQ Ann.</td>
+          <td>Canada</td>
+          <td>Q1 2025</td>
+          <td>2.1%</td>
+          <td>1.8%</td>
+          <td>1.4%</td>
+          <td class="mg-positive">Beat</td>
+        </tr>
+        <tr>
+          <td>Unemployment</td>
+          <td>Canada</td>
+          <td>Apr 2025</td>
+          <td>6.1%</td>
+          <td>6.0%</td>
+          <td>6.1%</td>
+          <td>In Line</td>
+        </tr>
+        <tr>
+          <td>Core PCE YoY</td>
+          <td>US</td>
+          <td>Apr 2025</td>
+          <td>2.6%</td>
+          <td>2.7%</td>
+          <td>2.8%</td>
+          <td class="mg-positive">Beat</td>
+        </tr>
+        <tr>
+          <td>Non-Farm Payrolls</td>
+          <td>US</td>
+          <td>Apr 2025</td>
+          <td>177K</td>
+          <td>185K</td>
+          <td>204K</td>
+          <td class="mg-negative">Miss</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="7">Data sourced from Statistics Canada, BLS, Federal Reserve. All releases provisional.</td></tr>
+      </tfoot>
+    </table>
+  </div>
+</section>
+
+<footer class="mg-footer">
+  <div class="mg-footer__inner">
+    <div>
+      <div class="mg-footer__name">Margin Capital Research</div>
+      <p class="mg-footer__desc">Independent equity and fixed-income research for institutional and sophisticated investors.</p>
+    </div>
+    <div>
+      <div style="font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,243,238,0.4); margin-bottom: 1rem;">Data</div>
+      <nav style="display: flex; flex-direction: column; gap: 0.625rem;">
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.65); text-decoration: none;">Market Data</a>
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.65); text-decoration: none;">Macro Calendar</a>
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.65); text-decoration: none;">Model Portfolio</a>
+      </nav>
+    </div>
+    <div>
+      <div style="font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,243,238,0.4); margin-bottom: 1rem;">Research</div>
+      <nav style="display: flex; flex-direction: column; gap: 0.625rem;">
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.65); text-decoration: none;">Equity</a>
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.65); text-decoration: none;">Fixed Income</a>
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.65); text-decoration: none;">Macro</a>
+      </nav>
+    </div>
+  </div>
+  <div style="max-width: var(--mg-full-max); margin-inline: auto; font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; color: rgba(245,243,238,0.35);">
+    &copy; 2025 Margin Capital Research. For accredited investors only. Not investment advice.</div>
+  <div style="max-width: var(--mg-full-max); margin-inline: auto; font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; color: rgba(245,243,238,0.35); line-height: 1.6; margin-top: 0.5rem;">Built with WordPress &amp; <a href="https://thisismyurl.com/margin/">Margin</a></div>
+</footer>
+
+</body>
+</html>

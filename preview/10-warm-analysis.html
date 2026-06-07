@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1200">
+<title>Margin — Warm Analysis Variant (Forest Green Accent)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="margin-preview.css">
+<style>
+  /*
+   * WARM ANALYSIS PALETTE — cream ground, forest green accent.
+   * Suited to sustainability-focused asset managers, ESG reporting,
+   * endowments, and foundations with a longer-horizon mandate.
+   *
+   * Forest green (#1a5c3a) on cream (#faf7f0): 6.8:1 — WCAG AA large.
+   */
+  :root {
+    --wp--preset--color--ground:       #faf7f0;
+    --wp--preset--color--paper:        #f5f1e8;
+    --wp--preset--color--white:        #fdfcf8;
+    --wp--preset--color--rule:         #ddd8cc;
+    --wp--preset--color--rule-light:   #ece8de;
+    --wp--preset--color--accent:       #1a5c3a;
+    --wp--preset--color--accent-tint:  #eaf3ee;
+    --wp--preset--color--ink-deep:     #0f1f16;
+    --wp--preset--color--positive:     #1a5c3a;
+    --wp--preset--color--negative:     #8b2020;
+  }
+
+  .mg-cta-btn { background: #1a5c3a; }
+  .mg-cta-btn:hover { background: #134428; }
+  .mg-ticker { background: #0f1f16; }
+  .mg-ticker__label { color: #4a7a5a; }
+  .mg-footer { background: #0f1f16; }
+</style>
+</head>
+<body>
+
+<div class="mg-ticker" style="background: #0f1f16;">
+  <div class="mg-ticker__inner">
+    <span class="mg-ticker__label" style="color: #4a7a5a;">Markets</span>
+    <div class="mg-ticker__items">
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">TSX</span><span class="mg-ticker__value">21,847.3</span><span class="mg-ticker__change--pos">▲ +0.42%</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">MSCI ESG</span><span class="mg-ticker__value">3,412.6</span><span class="mg-ticker__change--pos">▲ +0.51%</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">Green Bond</span><span class="mg-ticker__value">+0.18%</span><span class="mg-ticker__change--pos">▲ vs IG</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">USD/CAD</span><span class="mg-ticker__value">1.3641</span><span class="mg-ticker__change--neg">▼ −0.12%</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">Carbon Futures</span><span class="mg-ticker__value">$64.80</span><span class="mg-ticker__change--pos">▲ +1.4%</span></span>
+    </div>
+  </div>
+</div>
+
+<header class="mg-header">
+  <div class="mg-header__inner">
+    <a class="mg-site-name" href="#">Clearwater Asset Management</a>
+    <nav class="mg-nav">
+      <a href="#">Research</a>
+      <a href="#" class="current">Sustainability</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Reporting</a>
+      <a href="#">About</a>
+    </nav>
+    <a class="mg-cta-btn" href="#">Investor Access</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="mg-hero" style="padding-block: 4rem;">
+  <div class="mg-hero__inner">
+    <div class="mg-eyebrow">2025 Annual Sustainability Report</div>
+    <h1 class="mg-hero__title" style="font-size: clamp(2.5rem, 4vw, 4.5rem);">Capital allocation<br>with a thirty-year horizon</h1>
+    <p class="mg-hero__sub">Clearwater manages $2.4 billion in endowment and foundation capital. Our sustainability framework integrates long-duration carbon, biodiversity, and governance factors alongside financial return metrics.</p>
+    <div style="display: flex; gap: 1.5rem; margin-top: 2rem;">
+      <a class="mg-cta-btn" href="#">Download Report</a>
+      <a href="#" style="font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--wp--preset--color--accent); text-decoration: none; padding: 0.5rem 0; border-bottom: 1px solid var(--wp--preset--color--accent);">View Portfolio Data →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ESG metrics row -->
+<section class="mg-section mg-section--white" style="padding-block: 2rem;">
+  <div class="mg-constrained">
+    <div class="mg-metrics-row">
+      <div class="mg-metric">
+        <div class="mg-metric__label">AUM</div>
+        <div class="mg-metric__value" style="font-size: 2rem;">$2.4B</div>
+        <div class="mg-metric__change">endowment + foundation</div>
+      </div>
+      <div class="mg-metric">
+        <div class="mg-metric__label">ESG Score</div>
+        <div class="mg-metric__value" style="font-size: 2rem; color: var(--wp--preset--color--positive);">A+</div>
+        <div class="mg-metric__change mg-metric__change--pos">MSCI 2025 rating</div>
+      </div>
+      <div class="mg-metric">
+        <div class="mg-metric__label">Carbon Intensity</div>
+        <div class="mg-metric__value" style="font-size: 2rem; color: var(--wp--preset--color--positive);">−44%</div>
+        <div class="mg-metric__change mg-metric__change--pos">vs 2019 baseline</div>
+      </div>
+      <div class="mg-metric">
+        <div class="mg-metric__label">10Y Net Return</div>
+        <div class="mg-metric__value" style="font-size: 2rem;">8.4%</div>
+        <div class="mg-metric__change">annualised, net of fees</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio breakdown table -->
+<section class="mg-section mg-section--ground" style="padding-block: 2.5rem;">
+  <div class="mg-constrained">
+    <div class="mg-eyebrow" style="margin-bottom: 0.875rem;">Portfolio Allocation</div>
+    <table class="mg-data-table">
+      <caption>Sustainable Asset Allocation — Clearwater Endowment Fund · Q1 2025</caption>
+      <thead>
+        <tr>
+          <th>Asset Class</th>
+          <th>Allocation</th>
+          <th>ESG Tier</th>
+          <th>Carbon Score</th>
+          <th>1Y Return</th>
+          <th>5Y Ann.</th>
+          <th>Benchmark</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mg-ticker-cell">Canadian Equity</td>
+          <td>24.0%</td>
+          <td>A</td>
+          <td>Low</td>
+          <td class="mg-positive">+11.8%</td>
+          <td class="mg-positive">+9.2%</td>
+          <td>TSX Composite</td>
+        </tr>
+        <tr>
+          <td class="mg-ticker-cell">Global Equity</td>
+          <td>20.0%</td>
+          <td>A+</td>
+          <td>Very Low</td>
+          <td class="mg-positive">+14.2%</td>
+          <td class="mg-positive">+11.4%</td>
+          <td>MSCI World ESG</td>
+        </tr>
+        <tr>
+          <td class="mg-ticker-cell">Green Bonds</td>
+          <td>18.0%</td>
+          <td>AAA</td>
+          <td>None</td>
+          <td class="mg-positive">+4.8%</td>
+          <td>+3.9%</td>
+          <td>MSCI Green Bond</td>
+        </tr>
+        <tr>
+          <td class="mg-ticker-cell">Infrastructure</td>
+          <td>16.0%</td>
+          <td>A</td>
+          <td>Low</td>
+          <td class="mg-positive">+7.1%</td>
+          <td class="mg-positive">+8.8%</td>
+          <td>FTSE Infra</td>
+        </tr>
+        <tr>
+          <td class="mg-ticker-cell">Timberland &amp; Natural Capital</td>
+          <td>10.0%</td>
+          <td>A+</td>
+          <td>Negative</td>
+          <td class="mg-positive">+5.4%</td>
+          <td>+6.1%</td>
+          <td>NCREIF Timberland</td>
+        </tr>
+        <tr>
+          <td class="mg-ticker-cell">Private Credit</td>
+          <td>8.0%</td>
+          <td>BBB</td>
+          <td>Medium</td>
+          <td class="mg-positive">+8.6%</td>
+          <td class="mg-positive">+7.9%</td>
+          <td>Credit Suisse LL</td>
+        </tr>
+        <tr>
+          <td class="mg-ticker-cell">Cash &amp; Equivalents</td>
+          <td>4.0%</td>
+          <td>—</td>
+          <td>None</td>
+          <td>+4.9%</td>
+          <td>+2.1%</td>
+          <td>BoC Overnight</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="7">ESG Tier = MSCI composite. Carbon Score based on Scope 1+2 intensity vs benchmark median. Returns net of fees.</td></tr>
+      </tfoot>
+    </table>
+  </div>
+</section>
+
+<!-- Research cards -->
+<section class="mg-section mg-section--white">
+  <div class="mg-constrained">
+    <div class="mg-eyebrow" style="margin-bottom: 1rem;">Sustainability Research</div>
+    <div class="mg-research-grid">
+      <div class="mg-research-card">
+        <div class="mg-research-card__category">ESG · Climate</div>
+        <a class="mg-research-card__title" href="#">Physical Climate Risk in Canadian Real Estate: 2025 Portfolio Assessment</a>
+        <div class="mg-research-card__meta">May 2025 · Annual Review</div>
+      </div>
+      <div class="mg-research-card">
+        <div class="mg-research-card__category">Fixed Income · Green Bonds</div>
+        <a class="mg-research-card__title" href="#">Green Bond Premium: Does the Greenium Justify the Liquidity Cost?</a>
+        <div class="mg-research-card__meta">Apr 2025 · 22 pages</div>
+      </div>
+      <div class="mg-research-card">
+        <div class="mg-research-card__category">Equity · Natural Capital</div>
+        <a class="mg-research-card__title" href="#">Timberland as a Long-Duration Inflation Hedge: 20-Year Evidence</a>
+        <div class="mg-research-card__meta">Mar 2025 · 28 pages</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Palette note -->
+<div style="margin: 0; padding: 1.5rem; background: var(--wp--preset--color--paper); border-top: 1px solid var(--wp--preset--color--rule); border-inline-start: 4px solid var(--wp--preset--color--accent);">
+  <div style="font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--wp--preset--color--accent); margin-bottom: 0.5rem;">About this palette</div>
+  <p style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; line-height: 1.65; color: var(--wp--preset--color--ink-muted); max-width: 65ch;">
+    <strong style="color: var(--wp--preset--color--ink-deep);">Warm Analysis</strong> — ground: #faf7f0 (warm cream) · accent: #1a5c3a (forest green) · ink-deep: #0f1f16. Eight CSS custom property overrides in theme.json. Demonstrates how Margin serves sustainable asset managers, endowments, and ESG-focused institutions — same data-table discipline, warmer palette.
+  </p>
+</div>
+
+<footer class="mg-footer" style="background: #0f1f16;">
+  <div class="mg-footer__inner">
+    <div>
+      <div class="mg-footer__name">Clearwater Asset Management</div>
+      <p class="mg-footer__desc">Long-horizon capital management for endowments, foundations, and family offices.</p>
+    </div>
+    <div>
+      <div style="font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,243,238,0.4); margin-bottom: 1rem;">Research</div>
+      <nav style="display: flex; flex-direction: column; gap: 0.625rem;">
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.65); text-decoration: none;">Sustainability</a>
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.65); text-decoration: none;">Portfolio</a>
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.65); text-decoration: none;">Reporting</a>
+      </nav>
+    </div>
+    <div>
+      <div style="font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,243,238,0.4); margin-bottom: 1rem;">Company</div>
+      <nav style="display: flex; flex-direction: column; gap: 0.625rem;">
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.65); text-decoration: none;">About</a>
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.65); text-decoration: none;">Team</a>
+        <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; color: rgba(245,243,238,0.65); text-decoration: none;">Contact</a>
+      </nav>
+    </div>
+  </div>
+  <div style="max-width: var(--mg-full-max); margin-inline: auto; font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; color: rgba(245,243,238,0.35);">
+    &copy; 2025 Margin Capital Research. For accredited investors only. Not investment advice.</div>
+  <div style="max-width: var(--mg-full-max); margin-inline: auto; font-family: var(--wp--preset--font-family--mono); font-size: 0.6875rem; color: rgba(245,243,238,0.35); line-height: 1.6; margin-top: 0.5rem;">Built with WordPress &amp; <a href="https://thisismyurl.com/margin/">Margin</a></div>
+</footer>
+
+</body>
+</html>
