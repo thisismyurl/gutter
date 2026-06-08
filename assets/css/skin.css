@@ -1,0 +1,281 @@
+/* ── Parametric colour system (Colophon v2) ─────────────────────────────────
+   Three anchor custom props drive the entire neutral + accent scale via
+   color-mix() in OKLCh space. Set in settings.custom (theme.json); overridden
+   per style variation via the same settings.custom key.
+
+   Derived tokens (--clr-*) are intentionally separate from the block-editor
+   palette (--wp--preset--color--*). The palette tokens give the editor
+   accurate swatches; --clr-* tokens give CSS components automatic
+   variation-awareness without manual per-token overrides.
+
+   color-mix() browser support: Chrome 111+ · Firefox 113+ · Safari 16.2+
+   Global coverage ≈ 93 %. Fallback values (hex literals) serve older clients.
+   ─────────────────────────────────────────────────────────────────────────── */
+body {
+  /* Anchors — resolved from settings.custom; hex literals are the fallback */
+  --colophon-light:  var(--wp--custom--colophon-light,  #faf9f7);
+  --colophon-dark:   var(--wp--custom--colophon-dark,   #0f0f0f);
+  --colophon-accent: var(--wp--custom--colophon-accent, #1a4f7a);
+
+  /* Derived neutral scale (8 % / 22 % / 45 % stops in OKLCh) */
+  --clr-bg:          var(--colophon-light);
+  --clr-fg:          var(--colophon-dark);
+  --clr-surface:     color-mix(in oklch, var(--colophon-dark)  8%,  var(--colophon-light));
+  --clr-rule:        color-mix(in oklch, var(--colophon-dark) 22%,  var(--colophon-light));
+  --clr-muted:       color-mix(in oklch, var(--colophon-dark) 45%,  var(--colophon-light));
+
+  /* Accent and its tinted surface */
+  --clr-accent:      var(--colophon-accent);
+  --clr-accent-tint: color-mix(in oklch, var(--colophon-accent) 12%, var(--colophon-light));
+}
+
+/* =====================================================================
+   [SKIN] skin.css — Margin's layout, components, blocks, and utilities.
+   ---------------------------------------------------------------------
+   This is Margin's personality. The reset and base sheets are the same
+   for every theme in the Colophon collection; this sheet is what makes
+   Margin a financial research theme and not a portfolio theme.
+
+   Architecture: CSS @layers, declared in reset.css. Rules here live in
+   the appropriate layer based on their scope:
+     @layer layout     — structural containers, grids
+     @layer components — reusable UI patterns (data tables, stat blocks)
+     @layer blocks     — WordPress block-specific overrides
+     @layer utilities  — single-purpose helpers
+
+   Pillar 8 (Kodawari): IBM Plex Mono is the data font — every number,
+   every ticker, every ratio renders in monospace. The data table is the
+   design; the layout exists to frame it.
+   Pillar 9 (Archaeological Records): section headers explain WHY.
+   ===================================================================== */
+
+/* =====================================================================
+   LAYER: layout
+   ===================================================================== */
+@layer layout {
+
+	:root {
+		--wp--style--root--padding-top:    var(--wp--preset--spacing--4);
+		--wp--style--root--padding-right:  var(--wp--preset--spacing--5);
+		--wp--style--root--padding-bottom: var(--wp--preset--spacing--4);
+		--wp--style--root--padding-left:   var(--wp--preset--spacing--5);
+	}
+
+	:root { color-scheme: light; }
+
+	:root {
+		--cl-focus-ring:         var(--wp--preset--color--accent);
+		--cl-focus-ring-inverse: var(--wp--preset--color--white);
+		--cl-skip-bg:            var(--wp--preset--color--accent);
+		--cl-skip-fg:            var(--wp--preset--color--white);
+	}
+
+	.margin-research-hero {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: var(--wp--preset--spacing--8);
+	}
+	@media (min-width: 900px) {
+		.margin-research-hero {
+			grid-template-columns: 3fr 1fr;
+			align-items: end;
+		}
+	}
+
+	/* Market-watch wrapper — overflow-x for mobile data scroll */
+	.margin-market-watch { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+	/* Research cards grid */
+	.margin-cards-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: var(--wp--preset--spacing--8);
+	}
+	@media (min-width: 680px) { .margin-cards-grid { grid-template-columns: 1fr 1fr; } }
+	@media (min-width: 1100px) { .margin-cards-grid { grid-template-columns: 1fr 1fr 1fr; } }
+
+	/* Key-metrics strip */
+	.margin-key-metrics {
+		display: flex;
+		flex-direction: column;
+		gap: var(--wp--preset--spacing--6);
+	}
+	@media (min-width: 680px) {
+		.margin-key-metrics {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+	}
+}
+
+/* =====================================================================
+   LAYER: components
+   ===================================================================== */
+@layer components {
+
+	/* Data label — Plex Mono, ink-faint, small all-caps caption */
+	.is-style-margin-data-label {
+		font-family: var(--wp--preset--font-family--plex-mono) !important;
+		font-size: var(--wp--preset--font-size--2xs) !important;
+		font-weight: 400 !important;
+		letter-spacing: 0.08em !important;
+		text-transform: uppercase !important;
+		color: var(--wp--preset--color--ink-faint) !important;
+		line-height: 1.4 !important;
+	}
+
+	/* Overweight signal — accent blue. #1a4f7a on white = 7.2:1 (AAA). */
+	.is-style-margin-overweight {
+		font-family: var(--wp--preset--font-family--plex-mono) !important;
+		font-size: var(--wp--preset--font-size--2xs) !important;
+		font-weight: 500 !important;
+		letter-spacing: 0.06em !important;
+		text-transform: uppercase !important;
+		color: var(--wp--preset--color--accent) !important;
+		background: var(--wp--preset--color--accent-tint) !important;
+		padding: 0.125em 0.375em !important;
+	}
+
+	/* Underweight signal — negative red. #8b2020 on white = 7.8:1 (AAA). */
+	.is-style-margin-underweight {
+		font-family: var(--wp--preset--font-family--plex-mono) !important;
+		font-size: var(--wp--preset--font-size--2xs) !important;
+		font-weight: 500 !important;
+		letter-spacing: 0.06em !important;
+		text-transform: uppercase !important;
+		color: var(--wp--preset--color--negative) !important;
+		background: #fbeeee !important;
+		padding: 0.125em 0.375em !important;
+	}
+
+	/* Terminal display — dark, Plex Mono. paper on ink-deep = 19:1 (AAA). */
+	.is-style-margin-terminal {
+		background: var(--wp--preset--color--ink-deep) !important;
+		color: var(--wp--preset--color--paper) !important;
+		font-family: var(--wp--preset--font-family--plex-mono) !important;
+		font-size: var(--wp--preset--font-size--sm) !important;
+		letter-spacing: 0.04em !important;
+		line-height: 1.4 !important;
+		padding: var(--wp--preset--spacing--4) var(--wp--preset--spacing--5) !important;
+	}
+
+	/* Pull statistic — oversized Plex Mono, weight 300. The number is the hero. */
+	.is-style-margin-pull-stat {
+		font-family: var(--wp--preset--font-family--plex-mono) !important;
+		font-size: var(--wp--preset--font-size--4xl) !important;
+		font-weight: 300 !important;
+		letter-spacing: -0.02em !important;
+		line-height: 1.0 !important;
+		color: var(--wp--preset--color--ink-deep) !important;
+	}
+
+	/* Market-watch table — Plex Mono, dark header, alternating rows */
+	.margin-market-watch table {
+		width: 100%;
+		border-collapse: collapse;
+		font-family: var(--wp--preset--font-family--plex-mono);
+		font-size: var(--wp--preset--font-size--sm);
+	}
+	.margin-market-watch thead {
+		background: var(--wp--preset--color--ink-deep);
+		color: var(--wp--preset--color--paper);
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		font-size: var(--wp--preset--font-size--2xs);
+	}
+	.margin-market-watch th,
+	.margin-market-watch td {
+		padding: var(--wp--preset--spacing--3) var(--wp--preset--spacing--4);
+		text-align: start;
+		border-block-end: 1px solid var(--wp--preset--color--rule-light);
+	}
+	.margin-market-watch td:not(:first-child) { text-align: end; }
+	/* Interactivity API row highlight — toggled by wp-interactivity */
+	.margin-market-watch tr.is-row-active { background: var(--wp--preset--color--accent-tint) !important; }
+}
+
+/* =====================================================================
+   LAYER: blocks
+   ===================================================================== */
+@layer blocks {
+
+	.wp-block-table {
+		font-family: var(--wp--preset--font-family--plex-mono);
+		font-size: var(--wp--preset--font-size--sm);
+	}
+	.wp-block-table td,
+	.wp-block-table th {
+		border-color: var(--wp--preset--color--rule);
+		padding: var(--wp--preset--spacing--3) var(--wp--preset--spacing--4);
+	}
+
+	.wp-block-navigation a:hover {
+		text-decoration: none;
+		color: var(--wp--preset--color--accent);
+	}
+
+	.wp-block-post-title a:hover {
+		text-decoration: none;
+		color: var(--wp--preset--color--accent);
+	}
+
+	.wp-block-post-featured-image img { border-radius: 0; }
+
+	.wp-block-separator {
+		border-color: var(--wp--preset--color--rule);
+		max-inline-size: 100%;
+	}
+
+	/* Dates are data — Plex Mono */
+	.wp-block-post-date { font-family: var(--wp--preset--font-family--plex-mono); }
+}
+
+/* =====================================================================
+   LAYER: utilities
+   ===================================================================== */
+@layer utilities {
+
+	.margin-band--accent-tint { background: var(--wp--preset--color--accent-tint); }
+
+	.margin-band--accent {
+		background: var(--wp--preset--color--accent);
+		color: var(--wp--preset--color--white);
+		--cl-focus-ring: var(--cl-focus-ring-inverse);
+	}
+	.margin-band--accent a { color: var(--wp--preset--color--white); }
+	.margin-band--accent a:hover { color: var(--wp--preset--color--accent-tint); }
+
+	.margin-band--terminal {
+		background: var(--wp--preset--color--ink-deep);
+		color: var(--wp--preset--color--paper);
+		--cl-focus-ring: var(--cl-focus-ring-inverse);
+	}
+
+	.margin-band--ground { background: var(--wp--preset--color--ground); }
+	.margin-band--paper { background: var(--wp--preset--color--paper); }
+}
+
+/* ── Print ──────────────────────────────────────────────────────────────────
+   Hide chrome; show clean reading content.
+   ─────────────────────────────────────────────────────────────────────────── */
+@media print {
+  .wp-block-navigation,
+  .wp-block-site-logo,
+  .wp-site-blocks > footer,
+  [data-wp-interactive] { display: none !important; }
+
+  body,
+  .wp-site-blocks {
+    font-size: 12pt;
+    color: #000 !important;
+    background: #fff !important;
+    max-width: 100% !important;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555;
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+  "version": 3,
+  "title": "Bull Market",
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "slug": "accent",
+          "color": "#1A6340",
+          "name": "Accent"
+        },
+        {
+          "slug": "accent-tint",
+          "color": "#E0F0E8",
+          "name": "Accent Tint"
+        },
+        {
+          "slug": "positive",
+          "color": "#2A8050",
+          "name": "Positive"
+        }
+      ]
+    },
+    "custom": {
+      "colophon-light": "#faf9f7",
+      "colophon-dark": "#0f0f0f",
+      "colophon-accent": "#1A6340"
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--paper)",
+      "text": "var(--wp--preset--color--ink-primary)"
+    },
+    "elements": {
+      "heading": {
+        "color": {
+          "text": "var(--wp--preset--color--ink-deep)"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--accent)"
+        },
+        ":hover": {
+          "color": {
+            "text": "var(--wp--preset--color--ink-deep)"
+          }
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var(--wp--preset--color--accent)",
+          "text": "var(--wp--preset--color--paper)"
+        }
+      }
+    },
+    "blocks": {
+      "core/site-title": {
+        "color": {
+          "text": "var(--wp--preset--color--ink-deep)"
+        }
+      },
+      "core/navigation": {
+        "color": {
+          "text": "var(--wp--preset--color--ink-primary)"
+        }
+      }
+    }
+  }
+}

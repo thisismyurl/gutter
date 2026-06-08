@@ -1,0 +1,87 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+  "version": 3,
+  "title": "Night Report",
+  "settings": {
+    "custom": {
+      "colophon-light": "#070c14",
+      "colophon-dark": "#d8e0ec",
+      "colophon-accent": "#1a8a6a"
+    },
+    "color": {
+      "palette": [
+        {
+          "slug": "ink-deep",
+          "color": "#d8e0ec",
+          "name": "Ink Deep"
+        },
+        {
+          "slug": "ink-primary",
+          "color": "#c0c8d8",
+          "name": "Ink Primary"
+        },
+        {
+          "slug": "ink-muted",
+          "color": "#8090a8",
+          "name": "Ink Muted"
+        },
+        {
+          "slug": "ink-faint",
+          "color": "#3a4460",
+          "name": "Ink Faint"
+        },
+        {
+          "slug": "rule",
+          "color": "#1e2a3e",
+          "name": "Rule"
+        },
+        {
+          "slug": "rule-light",
+          "color": "#141e30",
+          "name": "Rule Light"
+        },
+        {
+          "slug": "ground",
+          "color": "#070c14",
+          "name": "Ground"
+        },
+        {
+          "slug": "paper",
+          "color": "#0e1520",
+          "name": "Paper"
+        },
+        {
+          "slug": "white",
+          "color": "#d8e0ec",
+          "name": "White"
+        },
+        {
+          "slug": "accent",
+          "color": "#1a8a6a",
+          "name": "Accent"
+        },
+        {
+          "slug": "accent-tint",
+          "color": "#0a2820",
+          "name": "Accent Tint"
+        },
+        {
+          "slug": "positive",
+          "color": "#2aaa6a",
+          "name": "Positive"
+        },
+        {
+          "slug": "negative",
+          "color": "#cc3333",
+          "name": "Negative"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--rule)",
+      "text": "var(--wp--preset--color--ink-deep)"
+    }
+  }
+}

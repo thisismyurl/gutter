@@ -1,0 +1,66 @@
+<!-- Search results template for Margin.
+     Shows "Results for: X" as an eyebrow header above a typographic
+     post list. No-results state orients the user and offers a refined search.
+
+     Pillar 6 (Resilience): the no-results state is an experience, not an
+     empty page. The search form reappears so the user has a clear next action. -->
+
+<!-- wp:template-part {"slug":"header"} /-->
+
+<!-- wp:group {"tagName":"main","id":"main-content","className":"margin-main margin-search","layout":{"type":"constrained","contentSize":"720px"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|20","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}}} -->
+<main id="main-content" class="wp-block-group margin-main margin-search" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
+
+	<!-- Search header: results count + search term -->
+	<!-- wp:group {"className":"margin-search-header","style":{"spacing":{"blockGap":"var:preset|spacing|4","padding":{"bottom":"var:preset|spacing|10"},"margin":{"bottom":"var:preset|spacing|10"}},"border":{"bottom":{"color":"var:preset|color|rule","style":"solid","width":"1px"}}},"layout":{"type":"default"}} -->
+	<div class="wp-block-group margin-search-header" style="padding-bottom:var(--wp--preset--spacing--10);margin-bottom:var(--wp--preset--spacing--10);border-bottom:1px solid var(--wp--preset--color--rule)">
+
+		<!-- wp:paragraph {"className":"is-style-margin-eyebrow"} -->
+		<p class="is-style-margin-eyebrow">Search Results</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:query-title {"type":"search","textAlign":"left","style":{"typography":{"fontFamily":"var:preset|font-family|plex-serif","fontWeight":"300","fontSize":"var:preset|font-size|3xl","letterSpacing":"-0.02em","lineHeight":"1.1"},"color":{"text":"var:preset|color|ink-primary"}}} /-->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Results list -->
+	<!-- wp:query {"queryId":1,"query":{"perPage":10,"postType":"post","order":"desc","orderBy":"relevance","inherit":true},"layout":{"type":"default"}} -->
+	<div class="wp-block-query">
+
+		<!-- wp:post-template {"layout":{"type":"default"}} -->
+
+			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3","padding":{"bottom":"var:preset|spacing|10"},"margin":{"bottom":"var:preset|spacing|10"}},"border":{"bottom":{"color":"var:preset|color|rule","style":"solid","width":"1px"}}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group" style="padding-bottom:var(--wp--preset--spacing--10);margin-bottom:var(--wp--preset--spacing--10);border-bottom:1px solid var(--wp--preset--color--rule)">
+				<!-- wp:template-part {"slug":"post-meta","tagName":"div"} /-->
+				<!-- wp:post-title {"isLink":true,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-serif","fontWeight":"400","fontSize":"var:preset|font-size|2xl","letterSpacing":"-0.01em","textDecoration":"none"},"color":{"text":"var:preset|color|ink-primary"}}} /-->
+				<!-- wp:post-excerpt {"moreText":"Read more","style":{"typography":{"fontFamily":"var:preset|font-family|plex-sans","lineHeight":"1.7"},"color":{"text":"var:preset|color|ink-primary"}}} /-->
+			</div>
+			<!-- /wp:group -->
+
+		<!-- /wp:post-template -->
+
+		<!-- No results: re-offer the search form with a plain-language message -->
+		<!-- wp:query-no-results -->
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|6"}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)">
+				<!-- wp:paragraph {"className":"is-style-margin-annotation"} -->
+				<p class="is-style-margin-annotation">No results found. Try a different term, or browse the works directory.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:search {"label":"Search","buttonText":"Search","buttonUseIcon":true,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-sans"}}} /-->
+			</div>
+			<!-- /wp:group -->
+		<!-- /wp:query-no-results -->
+
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->
+			<!-- wp:query-pagination-previous /-->
+			<!-- wp:query-pagination-numbers /-->
+			<!-- wp:query-pagination-next /-->
+		<!-- /wp:query-pagination -->
+
+	</div>
+	<!-- /wp:query -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer"} /-->

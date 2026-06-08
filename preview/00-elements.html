@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280">
+<title>Margin — All Elements</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="margin-preview.css">
+<style>
+  /* Page-local scaffolding for the element reference — not part of the theme. */
+  .el-pagenav {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 200;
+    background: var(--wp--preset--color--ink-deep);
+    padding: 0.625rem var(--mg-gutter);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .el-pagenav a {
+    font-family: var(--wp--preset--font-family--mono);
+    font-size: var(--wp--preset--font-size--2xs);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--wp--preset--color--ink-faint);
+  }
+  .el-pagenav a:hover { color: #fff; }
+  .el-pagenav strong { color: var(--wp--preset--color--ground); font-family: var(--wp--preset--font-family--serif); font-weight: 400; letter-spacing: -0.01em; text-transform: none; font-size: var(--wp--preset--font-size--md); margin-inline-end: auto; }
+
+  .el-section { padding-block: var(--mg-section-gap); padding-inline: var(--mg-gutter); background: var(--wp--preset--color--ground); }
+  .el-section--white { background: var(--wp--preset--color--white); }
+  .el-section__inner { max-width: var(--mg-full-max); margin-inline: auto; }
+  .el-section__label {
+    font-family: var(--wp--preset--font-family--mono);
+    font-size: var(--wp--preset--font-size--2xs);
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--wp--preset--color--accent);
+    margin-bottom: var(--wp--preset--spacing--7);
+  }
+  .el-type-row { display: flex; align-items: baseline; gap: 1.5rem; padding-block: 0.5rem; border-bottom: 1px solid var(--wp--preset--color--rule-light); }
+  .el-type-row__tag { flex: 0 0 5rem; font-family: var(--wp--preset--font-family--mono); font-size: var(--wp--preset--font-size--2xs); color: var(--wp--preset--color--ink-faint); letter-spacing: 0.06em; }
+  .el-swatches { display: flex; flex-wrap: wrap; gap: 1rem; }
+  .el-swatch { width: 8.5rem; }
+  .el-swatch__chip { height: 4.5rem; border: 1px solid var(--wp--preset--color--rule); }
+  .el-swatch__name { margin-top: 0.4rem; font-family: var(--wp--preset--font-family--mono); font-size: var(--wp--preset--font-size--2xs); color: var(--wp--preset--color--ink-muted); }
+  .el-btn-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+  .mg-cta-btn--outline {
+    background: transparent; color: var(--wp--preset--color--accent);
+    border: 1.5px solid var(--wp--preset--color--rule);
+  }
+  .mg-cta-btn--outline:hover { background: transparent; border-color: var(--wp--preset--color--accent); }
+  .mg-cta-btn.is-disabled { opacity: 0.4; pointer-events: none; }
+  .el-prose p { font-family: var(--wp--preset--font-family--sans); line-height: 1.65; max-width: var(--mg-serif-max); }
+  .el-prose a { color: var(--wp--preset--color--accent); text-decoration: underline; text-underline-offset: 0.12em; }
+  .el-stack-list ul, .el-stack-list ol { margin-block: 0.75rem; padding-inline-start: 1.5rem; font-family: var(--wp--preset--font-family--sans); }
+  .el-stack-list ul li { list-style: disc; margin-block: 0.4rem; line-height: 1.65; }
+  .el-stack-list ol li { list-style: decimal; margin-block: 0.4rem; line-height: 1.65; }
+  code.el-inline { background: var(--wp--preset--color--accent-tint); padding: 0.1rem 0.35rem; border-radius: 3px; font-family: var(--wp--preset--font-family--mono); font-size: 0.9em; color: var(--wp--preset--color--accent); }
+  pre.el-code {
+    background: var(--wp--preset--color--ink-primary);
+    color: var(--wp--preset--color--ground);
+    font-family: var(--wp--preset--font-family--mono);
+    font-size: var(--wp--preset--font-size--xs);
+    line-height: 1.7;
+    padding: var(--wp--preset--spacing--6);
+    overflow-x: auto;
+  }
+  .el-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--wp--preset--spacing--5); }
+</style>
+</head>
+<body>
+
+<nav class="el-pagenav">
+  <strong>Margin — All Elements</strong>
+  <a href="#type">Type</a>
+  <a href="#color">Color</a>
+  <a href="#buttons">Buttons</a>
+  <a href="#links">Links &amp; Lists</a>
+  <a href="#quote">Blockquote</a>
+  <a href="#code">Code</a>
+  <a href="#rule">Separator</a>
+  <a href="#cards">Cards</a>
+</nav>
+
+<header class="mg-header">
+  <div class="mg-header__inner">
+    <a class="mg-site-name" href="#">Ledger &amp; Line</a>
+    <nav class="mg-nav">
+      <a href="#" class="current">Research</a>
+      <a href="#">Markets</a>
+      <a href="#">Data</a>
+      <a href="#">About</a>
+    </nav>
+    <a class="mg-cta-btn" href="#">Subscribe</a>
+  </div>
+</header>
+
+<div class="mg-ticker">
+  <div class="mg-ticker__inner">
+    <span class="mg-ticker__label">Market Watch</span>
+    <div class="mg-ticker__items">
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">SPX</span><span class="mg-ticker__value">5,418.2</span><span class="mg-ticker__change--pos">+0.74%</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">DJI</span><span class="mg-ticker__value">39,210</span><span class="mg-ticker__change--neg">-0.31%</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">10Y</span><span class="mg-ticker__value">4.182</span><span class="mg-ticker__change--pos">+0.05</span></span>
+      <span class="mg-ticker__item"><span class="mg-ticker__symbol">BTC</span><span class="mg-ticker__value">61,840</span><span class="mg-ticker__change--neg">-1.20%</span></span>
+    </div>
+  </div>
+</div>
+
+<section class="el-section" id="type">
+  <div class="el-section__inner">
+    <p class="el-section__label">Typography Scale</p>
+    <div class="el-type-row"><span class="el-type-row__tag">Display</span><span style="font-family:var(--wp--preset--font-family--serif);font-size:var(--wp--preset--font-size--4xl);font-weight:300;letter-spacing:-0.03em;line-height:1;color:var(--wp--preset--color--ink-deep);">Data with a narrative</span></div>
+    <div class="el-type-row"><span class="el-type-row__tag">H1</span><h1 style="font-size:var(--wp--preset--font-size--4xl);">Research for the careful investor</h1></div>
+    <div class="el-type-row"><span class="el-type-row__tag">H2</span><h2>Numbers, read in context</h2></div>
+    <div class="el-type-row"><span class="el-type-row__tag">H3</span><h3>Daily notes from the desk</h3></div>
+    <div class="el-type-row"><span class="el-type-row__tag">H4</span><h4>Supporting heading in sans</h4></div>
+    <div class="el-type-row"><span class="el-type-row__tag">H5</span><h5>Section label tier</h5></div>
+    <div class="el-type-row"><span class="el-type-row__tag">H6</span><h6>Smallest label</h6></div>
+    <p style="margin-top:1.5rem;max-width:var(--mg-serif-max);font-family:var(--wp--preset--font-family--sans);line-height:1.65;">This is body text in IBM Plex Sans at the base size. Plex Serif carries the headlines and long-form reading; Plex Mono drives the data tables, tickers, and the small uppercase labels along the page.</p>
+    <p class="mg-eyebrow" style="margin-top:1.25rem;">Eyebrow label · caption tier</p>
+    <p style="font-family:var(--wp--preset--font-family--mono);font-size:var(--wp--preset--font-size--2xs);color:var(--wp--preset--color--ink-faint);letter-spacing:0.06em;">Small mono captions sit here, below body, for metadata and figures.</p>
+  </div>
+</section>
+
+<section class="el-section el-section--white" id="color">
+  <div class="el-section__inner">
+    <p class="el-section__label">Color Palette</p>
+    <div class="el-swatches">
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--ink-deep)"></div><div class="el-swatch__name">ink-deep</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--ink-primary)"></div><div class="el-swatch__name">ink-primary</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--ink-muted)"></div><div class="el-swatch__name">ink-muted</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--ink-faint)"></div><div class="el-swatch__name">ink-faint</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--rule)"></div><div class="el-swatch__name">rule</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--ground)"></div><div class="el-swatch__name">ground</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--paper)"></div><div class="el-swatch__name">paper</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--accent)"></div><div class="el-swatch__name">accent</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--accent-tint)"></div><div class="el-swatch__name">accent-tint</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--positive)"></div><div class="el-swatch__name">positive</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--negative)"></div><div class="el-swatch__name">negative</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="el-section" id="buttons">
+  <div class="el-section__inner">
+    <p class="el-section__label">Buttons</p>
+    <div class="el-btn-row">
+      <a class="mg-cta-btn" href="#">Subscribe</a>
+      <a class="mg-cta-btn mg-cta-btn--outline" href="#">View the data</a>
+      <a class="mg-cta-btn is-disabled" href="#" aria-disabled="true">Coming soon</a>
+    </div>
+  </div>
+</section>
+
+<section class="el-section el-section--white" id="links">
+  <div class="el-section__inner el-prose el-stack-list">
+    <p class="el-section__label">Links &amp; Lists</p>
+    <p>A paragraph carries <a href="#">an inline link</a> the way a reader expects it — underlined, in the blue accent, with a second <a href="#">link further along</a> to prove the pattern holds across a line of running text.</p>
+    <ul>
+      <li>Daily market notes and recaps</li>
+      <li>Sector deep-dives with charts</li>
+      <li>Earnings previews and reviews</li>
+      <li>Macro data calendars</li>
+      <li>Long-form research reports</li>
+    </ul>
+    <ol>
+      <li>Pull the data from primary filings</li>
+      <li>Model the figures, show the work</li>
+      <li>Write the read in plain language</li>
+      <li>Flag the assumptions and the risks</li>
+    </ol>
+  </div>
+</section>
+
+<section class="el-section" id="quote">
+  <div class="el-section__inner mg-article-body">
+    <p class="el-section__label">Blockquote</p>
+    <blockquote>
+      A number without its context is just a rumour with a decimal point.
+      <footer style="font-style:normal;font-family:var(--wp--preset--font-family--sans);font-size:var(--wp--preset--font-size--xs);color:var(--wp--preset--color--ink-faint);margin-top:0.75rem;">— Mara Okafor, <cite>Head of Research</cite></footer>
+    </blockquote>
+  </div>
+</section>
+
+<section class="el-section el-section--white" id="code">
+  <div class="el-section__inner el-prose">
+    <p class="el-section__label">Code</p>
+    <p>Tag each data cell with a sign class using <code class="el-inline">mg-positive</code> or <code class="el-inline">mg-negative</code> so the colour reads at a glance.</p>
+    <pre class="el-code"><code>$ ledger quote SPX
+SPX   5,418.20   <span class="mg-terminal-pos">+0.74%</span>
+DJI  39,210.00   <span class="mg-terminal-neg">-0.31%</span></code></pre>
+  </div>
+</section>
+
+<section class="el-section" id="rule">
+  <div class="el-section__inner">
+    <p class="el-section__label">Separator</p>
+    <hr class="mg-rule">
+  </div>
+</section>
+
+<section class="el-section el-section--white" id="cards">
+  <div class="el-section__inner">
+    <p class="el-section__label">Cards</p>
+    <div class="el-card-grid">
+      <article class="mg-research-card">
+        <span class="mg-research-card__category">Equities</span>
+        <a class="mg-research-card__title" href="#">The semiconductor cycle turns again</a>
+        <span class="mg-research-card__meta">12 min read · May 14, 2026</span>
+        <span class="mg-research-card__tag">Sector</span>
+      </article>
+      <article class="mg-research-card">
+        <span class="mg-research-card__category">Macro</span>
+        <a class="mg-research-card__title" href="#">Reading the yield curve in 2026</a>
+        <span class="mg-research-card__meta">8 min read · May 9, 2026</span>
+        <span class="mg-research-card__tag">Rates</span>
+      </article>
+      <article class="mg-research-card">
+        <span class="mg-research-card__category">Commodities</span>
+        <a class="mg-research-card__title" href="#">Copper as the macro tell</a>
+        <span class="mg-research-card__meta">10 min read · May 3, 2026</span>
+        <span class="mg-research-card__tag">Metals</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer class="mg-footer">
+  <div class="mg-footer__inner">
+    <div>
+      <p class="mg-footer__name">Ledger &amp; Line</p>
+      <p class="mg-footer__desc">Independent market research with the data shown and the assumptions named. Built on Margin.</p>
+    </div>
+    <div>
+      <p class="mg-footer__heading">Coverage</p>
+      <div class="mg-footer__links">
+        <a href="#">Research</a>
+        <a href="#">Markets</a>
+        <a href="#">Data</a>
+      </div>
+    </div>
+    <div>
+      <p class="mg-footer__heading">Company</p>
+      <div class="mg-footer__links">
+        <a href="#">About</a>
+        <a href="#">Subscribe</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="mg-footer__bottom">
+    <span>© 2026 Ledger &amp; Line</span>
+    <a href="#">Built with Margin</a>
+  </div>
+</footer>
+
+</body>
+</html>

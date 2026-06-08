@@ -1,0 +1,112 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+  "version": 3,
+  "title": "Report",
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "slug": "ink-deep",
+          "color": "#0A0A0A",
+          "name": "Ink Deep"
+        },
+        {
+          "slug": "ink-primary",
+          "color": "#111111",
+          "name": "Ink Primary"
+        },
+        {
+          "slug": "ink-muted",
+          "color": "#444444",
+          "name": "Ink Muted"
+        },
+        {
+          "slug": "ink-faint",
+          "color": "#888888",
+          "name": "Ink Faint"
+        },
+        {
+          "slug": "rule",
+          "color": "#D0D0D0",
+          "name": "Rule"
+        },
+        {
+          "slug": "rule-light",
+          "color": "#F0F0F0",
+          "name": "Rule Light"
+        },
+        {
+          "slug": "ground",
+          "color": "#FFFFFF",
+          "name": "Ground"
+        },
+        {
+          "slug": "paper",
+          "color": "#FFFFFF",
+          "name": "Paper"
+        },
+        {
+          "slug": "white",
+          "color": "#FFFFFF",
+          "name": "White"
+        },
+        {
+          "slug": "accent",
+          "color": "#0D2B45",
+          "name": "Accent"
+        },
+        {
+          "slug": "accent-tint",
+          "color": "#E0EAF4",
+          "name": "Accent Tint"
+        }
+      ]
+    },
+    "custom": {
+      "colophon-light": "#FFFFFF",
+      "colophon-dark": "#0A0A0A",
+      "colophon-accent": "#0D2B45"
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--ground)",
+      "text": "var(--wp--preset--color--ink-primary)"
+    },
+    "elements": {
+      "heading": {
+        "color": {
+          "text": "var(--wp--preset--color--ink-deep)"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--accent)"
+        },
+        ":hover": {
+          "color": {
+            "text": "var(--wp--preset--color--ink-deep)"
+          }
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var(--wp--preset--color--ink-deep)",
+          "text": "var(--wp--preset--color--ground)"
+        }
+      }
+    },
+    "blocks": {
+      "core/site-title": {
+        "color": {
+          "text": "var(--wp--preset--color--ink-deep)"
+        }
+      },
+      "core/navigation": {
+        "color": {
+          "text": "var(--wp--preset--color--ink-primary)"
+        }
+      }
+    }
+  }
+}
