@@ -1,20 +1,20 @@
 <?php
 /**
  * Title: Sector Analysis Table
- * Slug: margin/sector-table
- * Categories: margin-data
+ * Slug: gutter/sector-table
+ * Categories: gutter-data
  * Viewport Width: 1280
  * Inserter: true
- * Description: Full-width sector analysis table with overweight/underweight ratings. Uses WordPress Table block styled with IBM Plex Mono. Analyst ratings column uses margin-overweight and margin-underweight signal styles.
+ * Description: Full-width sector analysis table with overweight/underweight ratings. Uses WordPress Table block styled with IBM Plex Mono. Analyst ratings column uses gutter-overweight and gutter-underweight signal styles.
  */
 ?>
-<!-- wp:group {"className":"margin-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|12","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group margin-section" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
+<!-- wp:group {"className":"gutter-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|12","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group gutter-section" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
 
 	<!-- wp:group {"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|2"}},"layout":{"type":"default"}} -->
 	<div class="wp-block-group" style="padding-bottom:var(--wp--preset--spacing--6)">
-		<!-- wp:paragraph {"className":"is-style-margin-data-label"} -->
-		<p class="is-style-margin-data-label">Sector Coverage · Q2 2026</p>
+		<!-- wp:paragraph {"className":"is-style-gutter-data-label"} -->
+		<p class="is-style-gutter-data-label">Sector Coverage · Q2 2026</p>
 		<!-- /wp:paragraph -->
 		<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-serif","fontWeight":"300","fontSize":"var:preset|font-size|xl","letterSpacing":"-0.02em"},"color":{"text":"var:preset|color|ink-deep"}}} -->
 		<h2 style="font-family:var(--wp--preset--font-family--plex-serif);font-weight:300;font-size:var(--wp--preset--font-size--xl);letter-spacing:-0.02em;color:var(--wp--preset--color--ink-deep)">Sector Ratings Overview</h2>

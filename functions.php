@@ -1,6 +1,6 @@
 <?php
 /**
- * Margin — theme entry point (thin loader, nothing more).
+ * Gutter — theme entry point (thin loader, nothing more).
  *
  * All behaviour lives in inc/, split one concern per file, so this file stays a
  * table of contents you can read in five seconds. The single re-prefixing point
@@ -12,7 +12,7 @@
  * for the theme's own name. Don't add theme-specific behaviour here — it belongs
  * in inc/skin.php, the one file the CLI never overwrites.
  *
- * @package margin
+ * @package gutter
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -1,15 +1,15 @@
 <?php
 /**
  * Title: Market Watch
- * Slug: margin/market-watch
- * Categories: margin-data
+ * Slug: gutter/market-watch
+ * Categories: gutter-data
  * Viewport Width: 1280
  * Inserter: true
  * Description: Market data table with dark header row and Interactivity API row highlighting. IBM Plex Mono throughout. Overweight/underweight signal labels.
  */
 ?>
-<!-- wp:group {"className":"margin-section margin-band--ground","style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|12","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group margin-section margin-band--ground" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
+<!-- wp:group {"className":"gutter-section gutter-band--ground","style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|12","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group gutter-section gutter-band--ground" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
 
 	<!-- Section header -->
 	<!-- wp:group {"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|2"},"border":{"bottom":{"color":"var:preset|color|rule","style":"solid","width":"1px"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"baseline"}} -->
@@ -25,9 +25,9 @@
 
 	<!-- Market-watch table wrapper — Interactivity API row highlighting -->
 	<!-- wp:html -->
-	<div class="margin-market-watch" style="margin-top:var(--wp--preset--spacing--6)">
+	<div class="gutter-market-watch" style="margin-top:var(--wp--preset--spacing--6)">
 		<table
-			data-wp-interactive="margin-market-watch"
+			data-wp-interactive="gutter-market-watch"
 			data-wp-init="callbacks.init"
 		>
 			<thead>
@@ -50,7 +50,7 @@
 					<td>41.22</td>
 					<td style="color:var(--wp--preset--color--positive)">+1.84%</td>
 					<td>2.3M</td>
-					<td><span class="is-style-margin-overweight">Overweight</span></td>
+					<td><span class="is-style-gutter-overweight">Overweight</span></td>
 				</tr>
 				<tr
 					data-wp-on--click="callbacks.selectRow"
@@ -61,7 +61,7 @@
 					<td>28.17</td>
 					<td style="color:var(--wp--preset--color--positive)">+0.97%</td>
 					<td>1.1M</td>
-					<td><span class="is-style-margin-overweight">Overweight</span></td>
+					<td><span class="is-style-gutter-overweight">Overweight</span></td>
 				</tr>
 				<tr
 					data-wp-on--click="callbacks.selectRow"
@@ -72,7 +72,7 @@
 					<td>32.44</td>
 					<td style="color:var(--wp--preset--color--negative)">-0.32%</td>
 					<td>4.7M</td>
-					<td><span class="is-style-margin-underweight">Underweight</span></td>
+					<td><span class="is-style-gutter-underweight">Underweight</span></td>
 				</tr>
 				<tr
 					data-wp-on--click="callbacks.selectRow"
@@ -83,7 +83,7 @@
 					<td>17.89</td>
 					<td style="color:var(--wp--preset--color--positive)">+2.11%</td>
 					<td>8.2M</td>
-					<td><span class="is-style-margin-overweight">Overweight</span></td>
+					<td><span class="is-style-gutter-overweight">Overweight</span></td>
 				</tr>
 			</tbody>
 		</table>

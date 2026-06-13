@@ -1,6 +1,6 @@
 /* =====================================================================
-   margin-preview.css — standalone preview CSS for Playwright captures.
-   Margin theme: IBM Plex Serif + Mono + Sans, financial/data focus,
+   gutter-preview.css — standalone preview CSS for Playwright captures.
+   Gutter theme: IBM Plex Serif + Mono + Sans, financial/data focus,
    Bloomberg Terminal-inspired palette with warm off-white ground.
    ===================================================================== */
 @layer reset, base, layout, components, blocks, utilities, preview;
@@ -276,7 +276,7 @@
     margin-bottom: var(--wp--preset--spacing--9);
   }
 
-  /* ---- Data table (Margin signature feature) ---- */
+  /* ---- Data table (Gutter signature feature) ---- */
   .mg-data-table {
     width: 100%;
     border-collapse: collapse;

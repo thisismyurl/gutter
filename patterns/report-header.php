@@ -1,21 +1,21 @@
 <?php
 /**
  * Title: Report Header
- * Slug: margin/report-header
- * Categories: margin-editorial
+ * Slug: gutter/report-header
+ * Categories: gutter-editorial
  * Viewport Width: 1280
  * Inserter: true
  * Description: Full-width report cover header for a research publication page. Series label, report title, publication info, and a download button placeholder. Terminal dark background.
  */
 ?>
-<!-- wp:group {"className":"margin-section margin-band--terminal","style":{"spacing":{"padding":{"top":"var:preset|spacing|16","bottom":"var:preset|spacing|16","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group margin-section margin-band--terminal" style="padding-top:var(--wp--preset--spacing--16);padding-bottom:var(--wp--preset--spacing--16);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
+<!-- wp:group {"className":"gutter-section gutter-band--terminal","style":{"spacing":{"padding":{"top":"var:preset|spacing|16","bottom":"var:preset|spacing|16","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group gutter-section gutter-band--terminal" style="padding-top:var(--wp--preset--spacing--16);padding-bottom:var(--wp--preset--spacing--16);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
 
 	<!-- Report classification + series label -->
 	<!-- wp:group {"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|8"},"blockGap":"var:preset|spacing|4"},"border":{"bottom":{"color":"rgba(255,255,255,0.15)","style":"solid","width":"1px"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"baseline"}} -->
 	<div class="wp-block-group" style="padding-bottom:var(--wp--preset--spacing--8);border-bottom:1px solid rgba(255,255,255,0.15)">
-		<!-- wp:paragraph {"className":"is-style-margin-data-label","style":{"color":{"text":"var:preset|color|accent-tint"}}} -->
-		<p class="is-style-margin-data-label" style="color:var(--wp--preset--color--accent-tint)">Energy Infrastructure Series · Report 4 of 6</p>
+		<!-- wp:paragraph {"className":"is-style-gutter-data-label","style":{"color":{"text":"var:preset|color|accent-tint"}}} -->
+		<p class="is-style-gutter-data-label" style="color:var(--wp--preset--color--accent-tint)">Energy Infrastructure Series · Report 4 of 6</p>
 		<!-- /wp:paragraph -->
 		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|xs"},"color":{"text":"rgba(255,255,255,0.4)"}}} -->
 		<p style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--xs);color:rgba(255,255,255,0.4)">CONF: For Institutional Clients Only</p>

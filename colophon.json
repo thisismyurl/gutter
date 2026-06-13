@@ -1,8 +1,8 @@
 {
-  "name": "Margin",
-  "slug": "margin",
-  "namespace": "Margin",
-  "prefix": "margin",
+  "name": "Gutter",
+  "slug": "gutter",
+  "namespace": "Gutter",
+  "prefix": "gutter",
   "version": "1.158.1749",
   "colophon_version": "1.158.1749",
   "is_core": false,

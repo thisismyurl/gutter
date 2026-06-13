@@ -30,11 +30,11 @@ body {
 }
 
 /* =====================================================================
-   [SKIN] skin.css — Margin's layout, components, blocks, and utilities.
+   [SKIN] skin.css — Gutter's layout, components, blocks, and utilities.
    ---------------------------------------------------------------------
-   This is Margin's personality. The reset and base sheets are the same
+   This is Gutter's personality. The reset and base sheets are the same
    for every theme in the Colophon collection; this sheet is what makes
-   Margin a financial research theme and not a portfolio theme.
+   Gutter a financial research theme and not a portfolio theme.
 
    Architecture: CSS @layers, declared in reset.css. Rules here live in
    the appropriate layer based on their scope:
@@ -70,38 +70,38 @@ body {
 		--cl-skip-fg:            var(--wp--preset--color--white);
 	}
 
-	.margin-research-hero {
+	.gutter-research-hero {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: var(--wp--preset--spacing--8);
 	}
 	@media (min-width: 900px) {
-		.margin-research-hero {
+		.gutter-research-hero {
 			grid-template-columns: 3fr 1fr;
 			align-items: end;
 		}
 	}
 
 	/* Market-watch wrapper — overflow-x for mobile data scroll */
-	.margin-market-watch { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+	.gutter-market-watch { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 
 	/* Research cards grid */
-	.margin-cards-grid {
+	.gutter-cards-grid {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: var(--wp--preset--spacing--8);
 	}
-	@media (min-width: 680px) { .margin-cards-grid { grid-template-columns: 1fr 1fr; } }
-	@media (min-width: 1100px) { .margin-cards-grid { grid-template-columns: 1fr 1fr 1fr; } }
+	@media (min-width: 680px) { .gutter-cards-grid { grid-template-columns: 1fr 1fr; } }
+	@media (min-width: 1100px) { .gutter-cards-grid { grid-template-columns: 1fr 1fr 1fr; } }
 
 	/* Key-metrics strip */
-	.margin-key-metrics {
+	.gutter-key-metrics {
 		display: flex;
 		flex-direction: column;
 		gap: var(--wp--preset--spacing--6);
 	}
 	@media (min-width: 680px) {
-		.margin-key-metrics {
+		.gutter-key-metrics {
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: flex-start;
@@ -115,7 +115,7 @@ body {
 @layer components {
 
 	/* Data label — Plex Mono, ink-faint, small all-caps caption */
-	.is-style-margin-data-label {
+	.is-style-gutter-data-label {
 		font-family: var(--wp--preset--font-family--plex-mono) !important;
 		font-size: var(--wp--preset--font-size--2xs) !important;
 		font-weight: 400 !important;
@@ -126,7 +126,7 @@ body {
 	}
 
 	/* Overweight signal — accent blue. #1a4f7a on white = 7.2:1 (AAA). */
-	.is-style-margin-overweight {
+	.is-style-gutter-overweight {
 		font-family: var(--wp--preset--font-family--plex-mono) !important;
 		font-size: var(--wp--preset--font-size--2xs) !important;
 		font-weight: 500 !important;
@@ -138,7 +138,7 @@ body {
 	}
 
 	/* Underweight signal — negative red. #8b2020 on white = 7.8:1 (AAA). */
-	.is-style-margin-underweight {
+	.is-style-gutter-underweight {
 		font-family: var(--wp--preset--font-family--plex-mono) !important;
 		font-size: var(--wp--preset--font-size--2xs) !important;
 		font-weight: 500 !important;
@@ -150,7 +150,7 @@ body {
 	}
 
 	/* Terminal display — dark, Plex Mono. paper on ink-deep = 19:1 (AAA). */
-	.is-style-margin-terminal {
+	.is-style-gutter-terminal {
 		background: var(--wp--preset--color--ink-deep) !important;
 		color: var(--wp--preset--color--paper) !important;
 		font-family: var(--wp--preset--font-family--plex-mono) !important;
@@ -161,7 +161,7 @@ body {
 	}
 
 	/* Pull statistic — oversized Plex Mono, weight 300. The number is the hero. */
-	.is-style-margin-pull-stat {
+	.is-style-gutter-pull-stat {
 		font-family: var(--wp--preset--font-family--plex-mono) !important;
 		font-size: var(--wp--preset--font-size--4xl) !important;
 		font-weight: 300 !important;
@@ -171,28 +171,28 @@ body {
 	}
 
 	/* Market-watch table — Plex Mono, dark header, alternating rows */
-	.margin-market-watch table {
+	.gutter-market-watch table {
 		width: 100%;
 		border-collapse: collapse;
 		font-family: var(--wp--preset--font-family--plex-mono);
 		font-size: var(--wp--preset--font-size--sm);
 	}
-	.margin-market-watch thead {
+	.gutter-market-watch thead {
 		background: var(--wp--preset--color--ink-deep);
 		color: var(--wp--preset--color--paper);
 		text-transform: uppercase;
 		letter-spacing: 0.06em;
 		font-size: var(--wp--preset--font-size--2xs);
 	}
-	.margin-market-watch th,
-	.margin-market-watch td {
+	.gutter-market-watch th,
+	.gutter-market-watch td {
 		padding: var(--wp--preset--spacing--3) var(--wp--preset--spacing--4);
 		text-align: start;
 		border-block-end: 1px solid var(--wp--preset--color--rule-light);
 	}
-	.margin-market-watch td:not(:first-child) { text-align: end; }
+	.gutter-market-watch td:not(:first-child) { text-align: end; }
 	/* Interactivity API row highlight — toggled by wp-interactivity */
-	.margin-market-watch tr.is-row-active { background: var(--wp--preset--color--accent-tint) !important; }
+	.gutter-market-watch tr.is-row-active { background: var(--wp--preset--color--accent-tint) !important; }
 }
 
 /* =====================================================================
@@ -236,24 +236,24 @@ body {
    ===================================================================== */
 @layer utilities {
 
-	.margin-band--accent-tint { background: var(--wp--preset--color--accent-tint); }
+	.gutter-band--accent-tint { background: var(--wp--preset--color--accent-tint); }
 
-	.margin-band--accent {
+	.gutter-band--accent {
 		background: var(--wp--preset--color--accent);
 		color: var(--wp--preset--color--white);
 		--cl-focus-ring: var(--cl-focus-ring-inverse);
 	}
-	.margin-band--accent a { color: var(--wp--preset--color--white); }
-	.margin-band--accent a:hover { color: var(--wp--preset--color--accent-tint); }
+	.gutter-band--accent a { color: var(--wp--preset--color--white); }
+	.gutter-band--accent a:hover { color: var(--wp--preset--color--accent-tint); }
 
-	.margin-band--terminal {
+	.gutter-band--terminal {
 		background: var(--wp--preset--color--ink-deep);
 		color: var(--wp--preset--color--paper);
 		--cl-focus-ring: var(--cl-focus-ring-inverse);
 	}
 
-	.margin-band--ground { background: var(--wp--preset--color--ground); }
-	.margin-band--paper { background: var(--wp--preset--color--paper); }
+	.gutter-band--ground { background: var(--wp--preset--color--ground); }
+	.gutter-band--paper { background: var(--wp--preset--color--paper); }
 }
 
 /* ── Print ──────────────────────────────────────────────────────────────────

@@ -1,17 +1,17 @@
 <?php
 /**
  * Title: Site Footer
- * Slug: margin/site-footer
- * Categories: margin-reports
+ * Slug: gutter/site-footer
+ * Categories: gutter-reports
  * Viewport Width: 1280
  * Inserter: true
  * Description: Dark professional footer on ink-deep ground. Four columns — About, Research, Data, Subscribe — over a footer bar carrying copyright and legal disclaimers in Plex Mono.
  *
- * @package margin
+ * @package gutter
  */
 ?>
-<!-- wp:group {"className":"margin-site-footer","style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|10","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}},"color":{"background":"var:preset|color|ink-deep","text":"var:preset|color|ground"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group margin-site-footer has-ground-color has-ink-deep-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
+<!-- wp:group {"className":"gutter-site-footer","style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|10","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}},"color":{"background":"var:preset|color|ink-deep","text":"var:preset|color|ground"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group gutter-site-footer has-ground-color has-ink-deep-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
 
 	<!-- wp:columns {"isStackedOnMobile":true,"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|8"}}}} -->
 	<div class="wp-block-columns">
@@ -32,8 +32,8 @@
 			<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|2xs","fontWeight":"500","letterSpacing":"0.12em","textTransform":"uppercase"},"color":{"text":"var:preset|color|ink-faint"}}} -->
 			<h2 style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2xs);font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--wp--preset--color--ink-faint)">Research</h2>
 			<!-- /wp:heading -->
-			<!-- wp:list {"className":"margin-footer-links","style":{"spacing":{"margin":{"top":"var:preset|spacing|4"}},"typography":{"fontFamily":"var:preset|font-family|plex-sans","fontSize":"var:preset|font-size|sm","lineHeight":"2"}}} -->
-			<ul class="wp-block-list margin-footer-links" style="margin-top:var(--wp--preset--spacing--4);font-family:var(--wp--preset--font-family--plex-sans);font-size:var(--wp--preset--font-size--sm);line-height:2">
+			<!-- wp:list {"className":"gutter-footer-links","style":{"spacing":{"margin":{"top":"var:preset|spacing|4"}},"typography":{"fontFamily":"var:preset|font-family|plex-sans","fontSize":"var:preset|font-size|sm","lineHeight":"2"}}} -->
+			<ul class="wp-block-list gutter-footer-links" style="margin-top:var(--wp--preset--spacing--4);font-family:var(--wp--preset--font-family--plex-sans);font-size:var(--wp--preset--font-size--sm);line-height:2">
 				<!-- wp:list-item -->
 				<li><a href="#markets" style="color:var(--wp--preset--color--ground);text-decoration:none">Markets</a></li>
 				<!-- /wp:list-item -->
@@ -56,8 +56,8 @@
 			<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|2xs","fontWeight":"500","letterSpacing":"0.12em","textTransform":"uppercase"},"color":{"text":"var:preset|color|ink-faint"}}} -->
 			<h2 style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2xs);font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--wp--preset--color--ink-faint)">Data</h2>
 			<!-- /wp:heading -->
-			<!-- wp:list {"className":"margin-footer-links","style":{"spacing":{"margin":{"top":"var:preset|spacing|4"}},"typography":{"fontFamily":"var:preset|font-family|plex-sans","fontSize":"var:preset|font-size|sm","lineHeight":"2"}}} -->
-			<ul class="wp-block-list margin-footer-links" style="margin-top:var(--wp--preset--spacing--4);font-family:var(--wp--preset--font-family--plex-sans);font-size:var(--wp--preset--font-size--sm);line-height:2">
+			<!-- wp:list {"className":"gutter-footer-links","style":{"spacing":{"margin":{"top":"var:preset|spacing|4"}},"typography":{"fontFamily":"var:preset|font-family|plex-sans","fontSize":"var:preset|font-size|sm","lineHeight":"2"}}} -->
+			<ul class="wp-block-list gutter-footer-links" style="margin-top:var(--wp--preset--spacing--4);font-family:var(--wp--preset--font-family--plex-sans);font-size:var(--wp--preset--font-size--sm);line-height:2">
 				<!-- wp:list-item -->
 				<li><a href="#datasets" style="color:var(--wp--preset--color--ground);text-decoration:none">Datasets</a></li>
 				<!-- /wp:list-item -->
@@ -96,10 +96,10 @@
 	</div>
 	<!-- /wp:columns -->
 
-	<!-- wp:group {"className":"margin-footer-bar","style":{"spacing":{"padding":{"top":"var:preset|spacing|6"},"margin":{"top":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|3"},"border":{"top":{"color":"var:preset|color|ink-primary","style":"solid","width":"1px"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
-	<div class="wp-block-group margin-footer-bar" style="border-top:1px solid var(--wp--preset--color--ink-primary);margin-top:var(--wp--preset--spacing--10);padding-top:var(--wp--preset--spacing--6)">
+	<!-- wp:group {"className":"gutter-footer-bar","style":{"spacing":{"padding":{"top":"var:preset|spacing|6"},"margin":{"top":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|3"},"border":{"top":{"color":"var:preset|color|ink-primary","style":"solid","width":"1px"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+	<div class="wp-block-group gutter-footer-bar" style="border-top:1px solid var(--wp--preset--color--ink-primary);margin-top:var(--wp--preset--spacing--10);padding-top:var(--wp--preset--spacing--6)">
 		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|xs","letterSpacing":"0.04em"},"color":{"text":"var:preset|color|ink-faint"}}} -->
-		<p style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--xs);letter-spacing:0.04em;color:var(--wp--preset--color--ink-faint)">© 2026 Margin Research. All rights reserved.</p>
+		<p style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--xs);letter-spacing:0.04em;color:var(--wp--preset--color--ink-faint)">© 2026 Gutter Research. All rights reserved.</p>
 		<!-- /wp:paragraph -->
 		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|xs","letterSpacing":"0.04em"},"color":{"text":"var:preset|color|ink-faint"}}} -->
 		<p style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--xs);letter-spacing:0.04em;color:var(--wp--preset--color--ink-faint)">Not investment advice. Figures are estimates and subject to revision.</p>
