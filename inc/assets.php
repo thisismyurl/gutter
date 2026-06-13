@@ -6,12 +6,12 @@
  * enqueued explicitly here in cascade order. The order is: reset (declares the
  *
  * @layer order for the whole theme), then core base (a11y scaffolding), then
- * the skin (Margin's personality). Each sheet depends on the previous so the
+ * the skin (Gutter's personality). Each sheet depends on the previous so the
  * <link> order in the page is deterministic.
  *
  * Fonts load via theme.json @font-face declarations — no render-blocking <link>
  * for fonts. An optional preload for the LCP-critical font fires separately via
- * the margin/preload_fonts filter (registered in inc/skin.php).
+ * the gutter/preload_fonts filter (registered in inc/skin.php).
  *
  * Portable: every handle derives from the SLUG constant, so a re-skin needs no
  * edit. The sheet list is fixed [CORE]; the skin sheet's content is the theme's,
@@ -22,10 +22,10 @@
  * required mid-iteration.
  * Pillar 9 (Archaeological Records): [CORE] tag marks what the CLI owns.
  *
- * @package margin
+ * @package gutter
  */
 
-namespace Margin;
+namespace Gutter;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -42,7 +42,7 @@ function enqueue_assets(): void {
 	$sheets = array(
 		'reset' => 'assets/css/core/reset.css', // [CORE] @layer declaration + reset.
 		'base'  => 'assets/css/core/base.css',  // [CORE] a11y scaffolding + --cl-* token contract.
-		'skin'  => 'assets/css/skin.css',       // [SKIN] Margin's layout, components, blocks, utilities.
+		'skin'  => 'assets/css/skin.css',       // [SKIN] Gutter's layout, components, blocks, utilities.
 	);
 
 	$deps = array();
@@ -91,7 +91,7 @@ function preload_fonts(): void {
 	 * @since 1.0.0
 	 * @param string[] $fonts Theme-root-relative WOFF2 paths.
 	 */
-	$fonts = (array) apply_filters( 'margin/preload_fonts', array() );
+	$fonts = (array) apply_filters( 'gutter/preload_fonts', array() );
 
 	foreach ( $fonts as $font ) {
 		if ( ! is_string( $font ) || '' === $font || false !== strpos( $font, '://' ) ) {

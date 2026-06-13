@@ -16,17 +16,17 @@
  * requirement into the one line below.
  *
  * NOTE — the one place "tidy" is a bug: the text DOMAIN in __()/_e()/esc_html__()
- * stays a string LITERAL ('margin'), never the SLUG constant. `wp i18n make-pot`
+ * stays a string LITERAL ('gutter'), never the SLUG constant. `wp i18n make-pot`
  * reads source statically and only recognises a literal as the domain argument;
  * hand it a constant and it extracts nothing and ships an untranslatable theme.
  *
  * Pillar 9 (Archaeological Records): this header is the authoritative record of
  * who this theme is. Change it here and only here.
  *
- * @package margin
+ * @package gutter
  */
 
-namespace Margin;
+namespace Gutter;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -34,7 +34,7 @@ defined( 'ABSPATH' ) || exit;
  * Theme slug — the text-domain-equivalent identity used for asset handles,
  * pattern and block-style prefixes, and the block-bindings source namespace.
  */
-const SLUG = 'margin';
+const SLUG = 'gutter';
 
 /**
  * Theme version — cache-bust for enqueued assets and the WordPress.org version.

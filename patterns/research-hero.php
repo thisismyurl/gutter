@@ -1,15 +1,15 @@
 <?php
 /**
  * Title: Research Hero
- * Slug: margin/research-hero
- * Categories: margin-editorial
+ * Slug: gutter/research-hero
+ * Categories: gutter-editorial
  * Viewport Width: 1280
  * Inserter: true
  * Description: Research article opener — headline left, key figure right. IBM Plex Serif 300 at display scale; IBM Plex Mono for the pull stat. No decorative photography.
  */
 ?>
-<!-- wp:group {"className":"margin-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|16","bottom":"var:preset|spacing|12","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group margin-section" style="padding-top:var(--wp--preset--spacing--16);padding-bottom:var(--wp--preset--spacing--12);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
+<!-- wp:group {"className":"gutter-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|16","bottom":"var:preset|spacing|12","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group gutter-section" style="padding-top:var(--wp--preset--spacing--16);padding-bottom:var(--wp--preset--spacing--12);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3","padding":{"bottom":"var:preset|spacing|5"}},"border":{"bottom":{"color":"var:preset|color|rule","style":"solid","width":"1px"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"baseline"}} -->
 	<div class="wp-block-group" style="padding-bottom:var(--wp--preset--spacing--5);border-bottom:1px solid var(--wp--preset--color--rule)">
@@ -49,11 +49,11 @@
 		<div class="wp-block-column" style="flex-basis:30%">
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6","left":"var:preset|spacing|6","right":"var:preset|spacing|6"}},"border":{"top":{"color":"var:preset|color|accent","style":"solid","width":"2px"}}},"layout":{"type":"default"}} -->
 			<div class="wp-block-group" style="padding:var(--wp--preset--spacing--6);border-top:2px solid var(--wp--preset--color--accent)">
-				<!-- wp:heading {"level":2,"className":"is-style-margin-pull-stat","style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontWeight":"300","fontSize":"var:preset|font-size|4xl","letterSpacing":"-0.02em","lineHeight":"1.0"},"color":{"text":"var:preset|color|ink-deep"}}} -->
-				<h2 class="is-style-margin-pull-stat" style="font-family:var(--wp--preset--font-family--plex-mono);font-weight:300;font-size:var(--wp--preset--font-size--4xl);letter-spacing:-0.02em;line-height:1.0;color:var(--wp--preset--color--ink-deep)">$4.7T</h2>
+				<!-- wp:heading {"level":2,"className":"is-style-gutter-pull-stat","style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontWeight":"300","fontSize":"var:preset|font-size|4xl","letterSpacing":"-0.02em","lineHeight":"1.0"},"color":{"text":"var:preset|color|ink-deep"}}} -->
+				<h2 class="is-style-gutter-pull-stat" style="font-family:var(--wp--preset--font-family--plex-mono);font-weight:300;font-size:var(--wp--preset--font-size--4xl);letter-spacing:-0.02em;line-height:1.0;color:var(--wp--preset--color--ink-deep)">$4.7T</h2>
 				<!-- /wp:heading -->
-				<!-- wp:paragraph {"className":"is-style-margin-data-label","style":{"spacing":{"margin":{"top":"var:preset|spacing|3"}}}} -->
-				<p class="is-style-margin-data-label" style="margin-top:var(--wp--preset--spacing--3)">Required grid capital by 2040</p>
+				<!-- wp:paragraph {"className":"is-style-gutter-data-label","style":{"spacing":{"margin":{"top":"var:preset|spacing|3"}}}} -->
+				<p class="is-style-gutter-data-label" style="margin-top:var(--wp--preset--spacing--3)">Required grid capital by 2040</p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->

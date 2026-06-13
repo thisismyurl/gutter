@@ -6,38 +6,38 @@
    intentionally calm — it should feel like part of WordPress, not a takeover.
    ===================================================================== */
 
-.margin-get-started {
+.gutter-get-started {
 	max-width: 760px;
 }
 
-.margin-get-started__lead {
+.gutter-get-started__lead {
 	font-size: 15px;
 	line-height: 1.7;
 	max-width: 60ch;
 	color: #2c3338;
 }
 
-.margin-get-started h2 {
+.gutter-get-started h2 {
 	margin-top: 2rem;
 	padding-top: 1.25rem;
 	border-top: 1px solid #dcdcde;
 }
 
-.margin-get-started__steps {
+.gutter-get-started__steps {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	counter-reset: cl-step;
 }
 
-.margin-get-started__steps li {
+.gutter-get-started__steps li {
 	position: relative;
 	padding: 0 0 1rem 2.5rem;
 	max-width: 60ch;
 	line-height: 1.6;
 }
 
-.margin-get-started__steps li::before {
+.gutter-get-started__steps li::before {
 	counter-increment: cl-step;
 	content: counter(cl-step);
 	position: absolute;
@@ -55,7 +55,7 @@
 	border-radius: 50%;
 }
 
-.margin-get-started__steps strong {
+.gutter-get-started__steps strong {
 	display: block;
 	margin-bottom: 0.15rem;
 }

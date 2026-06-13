@@ -1,17 +1,17 @@
 <?php
 /**
  * Title: Report CTA
- * Slug: margin/report-cta
- * Categories: margin-reports
+ * Slug: gutter/report-cta
+ * Categories: gutter-reports
  * Viewport Width: 1280
  * Inserter: true
  * Description: Full-width call to action to download or subscribe to a research report. Plex Serif headline, Plex Sans pitch copy, accent-blue primary button and a secondary subscribe link on a light accent-tint ground with an accent left rule.
  *
- * @package margin
+ * @package gutter
  */
 ?>
-<!-- wp:group {"className":"margin-section margin-report-cta","style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|12","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}},"border":{"left":{"color":"var:preset|color|accent","style":"solid","width":"4px"}},"color":{"background":"var:preset|color|accent-tint"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group margin-section margin-report-cta has-background" style="border-left:4px solid var(--wp--preset--color--accent);background-color:var(--wp--preset--color--accent-tint);padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
+<!-- wp:group {"className":"gutter-section gutter-report-cta","style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|12","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}},"border":{"left":{"color":"var:preset|color|accent","style":"solid","width":"4px"}},"color":{"background":"var:preset|color|accent-tint"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group gutter-section gutter-report-cta has-background" style="border-left:4px solid var(--wp--preset--color--accent);background-color:var(--wp--preset--color--accent-tint);padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"640px","justifyContent":"left"}} -->
 	<div class="wp-block-group">

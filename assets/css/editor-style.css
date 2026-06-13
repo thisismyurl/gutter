@@ -11,8 +11,8 @@
    first tool.
    ===================================================================== */
 
-/* Mirror the margin-eyebrow component for the editor preview */
-.editor-styles-wrapper .is-style-margin-eyebrow {
+/* Mirror the gutter-eyebrow component for the editor preview */
+.editor-styles-wrapper .is-style-gutter-eyebrow {
 	font-size: 0.6875rem;
 	font-weight: 600;
 	letter-spacing: 0.14em;
@@ -21,14 +21,14 @@
 }
 
 /* Mirror the annotation style */
-.editor-styles-wrapper .is-style-margin-annotation {
+.editor-styles-wrapper .is-style-gutter-annotation {
 	font-size: 0.75rem;
 	letter-spacing: 0.06em;
 	color: #6b6b68;
 }
 
 /* Directory entry: top rule visible in editor */
-.editor-styles-wrapper .is-style-margin-directory-entry {
+.editor-styles-wrapper .is-style-gutter-directory-entry {
 	border-top: 1px solid #d6d3cc;
 	padding-top: 2rem;
 	padding-bottom: 2rem;

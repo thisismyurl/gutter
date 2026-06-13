@@ -16,10 +16,10 @@
  * style.css header, so this file carries no theme-specific string and stays
  * pure core.
  *
- * @package margin
+ * @package gutter
  */
 
-namespace Margin;
+namespace Gutter;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -37,7 +37,7 @@ function register_bindings(): void {
 	register_block_bindings_source(
 		SLUG . '/copyright',
 		array(
-			'label'              => __( 'Copyright line', 'margin' ),
+			'label'              => __( 'Copyright line', 'gutter' ),
 			'get_value_callback' => __NAMESPACE__ . '\\get_copyright_value',
 			'uses_context'       => array(),
 		)
@@ -46,7 +46,7 @@ function register_bindings(): void {
 	register_block_bindings_source(
 		SLUG . '/footer-credit',
 		array(
-			'label'              => __( 'Footer credit line', 'margin' ),
+			'label'              => __( 'Footer credit line', 'gutter' ),
 			'get_value_callback' => __NAMESPACE__ . '\\get_footer_credit_value',
 			'uses_context'       => array(),
 		)
@@ -79,7 +79,7 @@ function get_copyright_value(): string {
 
 	$copyright = sprintf(
 		/* translators: 1: four-digit year, 2: site title. */
-		__( '© %1$s %2$s. All rights reserved.', 'margin' ),
+		__( '© %1$s %2$s. All rights reserved.', 'gutter' ),
 		$year,
 		esc_html( get_bloginfo( 'name' ) )
 	);
@@ -120,7 +120,7 @@ function get_footer_credit_value(): string {
 
 	$credit = sprintf(
 		/* translators: %s: linked theme name. */
-		__( 'Built with the %s theme.', 'margin' ),
+		__( 'Built with the %s theme.', 'gutter' ),
 		$linked
 	);
 

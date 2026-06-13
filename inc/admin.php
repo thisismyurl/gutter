@@ -15,10 +15,10 @@
  * they want to. The single wp_safe_redirect() below is in the post-dismiss
  * handler, after a state change — never on activation.
  *
- * @package margin
+ * @package gutter
  */
 
-namespace Margin;
+namespace Gutter;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -38,7 +38,7 @@ const DISMISS_ACTION = 'margin_dismiss_welcome'; // hardcoded slug — CLI rewri
 /**
  * Admin-menu slug for the Get-started page.
  */
-const GET_STARTED_SLUG = 'margin-get-started';
+const GET_STARTED_SLUG = 'gutter-get-started';
 
 /**
  * Raise the one-time welcome flag when the theme becomes active.
@@ -69,7 +69,7 @@ function clear_welcome_notice(): void {
 function register_get_started_page(): void {
 	add_theme_page(
 		/* translators: %s: theme name. */
-		sprintf( esc_html__( '%s: Get started', 'margin' ), get_theme_name() ),
+		sprintf( esc_html__( '%s: Get started', 'gutter' ), get_theme_name() ),
 		get_theme_name(),
 		get_onboarding_capability(),
 		GET_STARTED_SLUG,
@@ -164,25 +164,25 @@ function render_welcome_notice(): void {
 	$theme    = get_theme_name();
 	$dismiss  = wp_nonce_url( admin_url( 'admin-post.php?action=' . DISMISS_ACTION ), DISMISS_ACTION );
 	?>
-	<div class="notice notice-info is-dismissible margin-welcome-notice">
+	<div class="notice notice-info is-dismissible gutter-welcome-notice">
 		<p>
 			<strong>
 				<?php
 				/* translators: %s: theme name. */
-				printf( esc_html__( 'Welcome to %s.', 'margin' ), esc_html( $theme ) );
+				printf( esc_html__( 'Welcome to %s.', 'gutter' ), esc_html( $theme ) );
 				?>
 			</strong>
-			<?php esc_html_e( 'Thanks for giving it a home. A few small steps will have your site reading the way it should.', 'margin' ); ?>
+			<?php esc_html_e( 'Thanks for giving it a home. A few small steps will have your site reading the way it should.', 'gutter' ); ?>
 		</p>
 		<p>
 			<a class="button button-primary" href="<?php echo esc_url( $page_url ); ?>">
 				<?php
 				/* translators: %s: theme name. */
-				printf( esc_html__( 'Set up %s →', 'margin' ), esc_html( $theme ) );
+				printf( esc_html__( 'Set up %s →', 'gutter' ), esc_html( $theme ) );
 				?>
 			</a>
-			<a class="margin-welcome-notice__dismiss" href="<?php echo esc_url( $dismiss ); ?>">
-				<?php esc_html_e( 'Dismiss', 'margin' ); ?>
+			<a class="gutter-welcome-notice__dismiss" href="<?php echo esc_url( $dismiss ); ?>">
+				<?php esc_html_e( 'Dismiss', 'gutter' ); ?>
 			</a>
 		</p>
 	</div>
@@ -198,7 +198,7 @@ add_action( 'admin_notices', __NAMESPACE__ . '\\render_welcome_notice' );
  */
 function handle_welcome_dismiss(): void {
 	if ( ! current_user_can( get_onboarding_capability() ) ) {
-		wp_die( esc_html__( 'You do not have permission to do that.', 'margin' ) );
+		wp_die( esc_html__( 'You do not have permission to do that.', 'gutter' ) );
 	}
 
 	check_admin_referer( DISMISS_ACTION );
@@ -224,37 +224,37 @@ function get_started_content(): array {
 	$default = array(
 		'lead'       => sprintf(
 			/* translators: %s: theme name. */
-			__( '%s is a free, full-site-editing theme built to get out of the way of your content. Here is how to make it yours.', 'margin' ),
+			__( '%s is a free, full-site-editing theme built to get out of the way of your content. Here is how to make it yours.', 'gutter' ),
 			$theme
 		),
 		'steps'      => array(
 			array(
-				'title' => __( 'Choose what people land on.', 'margin' ),
-				'body'  => __( "A visitor's first second decides whether they stay. Set a static front page under Settings → Reading, and give your posts a page of their own.", 'margin' ),
+				'title' => __( 'Choose what people land on.', 'gutter' ),
+				'body'  => __( "A visitor's first second decides whether they stay. Set a static front page under Settings → Reading, and give your posts a page of their own.", 'gutter' ),
 			),
 			array(
-				'title' => __( 'Give people a way around.', 'margin' ),
-				'body'  => __( 'A site without a menu is a room without doors. Open the Site Editor, edit the header, and assign your menu to Primary Navigation.', 'margin' ),
+				'title' => __( 'Give people a way around.', 'gutter' ),
+				'body'  => __( 'A site without a menu is a room without doors. Open the Site Editor, edit the header, and assign your menu to Primary Navigation.', 'gutter' ),
 			),
 			array(
-				'title' => __( 'Start from a pattern, not a blank page.', 'margin' ),
-				'body'  => __( 'In any page or post, open the block inserter, choose Patterns, and find this theme\'s group. Drop one in and change the words.', 'margin' ),
+				'title' => __( 'Start from a pattern, not a blank page.', 'gutter' ),
+				'body'  => __( 'In any page or post, open the block inserter, choose Patterns, and find this theme\'s group. Drop one in and change the words.', 'gutter' ),
 			),
 			array(
-				'title' => __( 'Make it sound like you.', 'margin' ),
-				'body'  => __( 'In the Site Editor, open Styles to change colours and typefaces. Nothing you do there can break the theme — experiment freely.', 'margin' ),
+				'title' => __( 'Make it sound like you.', 'gutter' ),
+				'body'  => __( 'In the Site Editor, open Styles to change colours and typefaces. Nothing you do there can break the theme — experiment freely.', 'gutter' ),
 			),
 		),
 		'optimize'   => array(
-			__( "This theme is already fast by design: zero front-end JavaScript, self-hosted fonts that don't phone home, and tuning against the Core Web Vitals search engines actually measure.", 'margin' ),
-			__( 'It meets WCAG 2.2 AA — real focus outlines, a skip link, sensible heading order, and motion that respects a reduce-motion setting. Keep your own copy and images to that bar and the whole site stays welcoming.', 'margin' ),
+			__( "This theme is already fast by design: zero front-end JavaScript, self-hosted fonts that don't phone home, and tuning against the Core Web Vitals search engines actually measure.", 'gutter' ),
+			__( 'It meets WCAG 2.2 AA — real focus outlines, a skip link, sensible heading order, and motion that respects a reduce-motion setting. Keep your own copy and images to that bar and the whole site stays welcoming.', 'gutter' ),
 		),
-		'credit'     => __( "There's a small credit in your footer. It's a thank-you, not a tax — remove it in two clicks in the Site Editor → Footer, or filter it out in code. No hard feelings either way.", 'margin' ),
+		'credit'     => __( "There's a small credit in your footer. It's a thank-you, not a tax — remove it in two clicks in the Site Editor → Footer, or filter it out in code. No hard feelings either way.", 'gutter' ),
 		'developers' => array(
 			/* translators: %s: linked developer-guide anchor. */
-			'text'  => __( 'This theme is built on Colophon, a small documented core meant to be reused. The %s walks through how to build your own theme on it.', 'margin' ),
-			'url'   => 'https://thisismyurl.com/colophon',
-			'label' => __( 'developer guide', 'margin' ),
+			'text'  => __( 'This theme is built on Colophon, a small documented core meant to be reused. The %s walks through how to build your own theme on it.', 'gutter' ),
+			'url'   => apply_filters( SLUG . '/developer_guide_url', 'https://thisismyurl.com/colophon' ), // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
+			'label' => __( 'developer guide', 'gutter' ),
 		),
 	);
 
@@ -299,22 +299,22 @@ function render_get_started_page(): void {
 		),
 	);
 	?>
-	<div class="wrap margin-get-started">
+	<div class="wrap gutter-get-started">
 
 		<h1>
 			<?php
 			/* translators: %s: theme name. */
-			printf( esc_html__( '%s: Get started', 'margin' ), esc_html( $theme ) );
+			printf( esc_html__( '%s: Get started', 'gutter' ), esc_html( $theme ) );
 			?>
 		</h1>
 
 		<?php if ( ! empty( $content['lead'] ) ) : ?>
-			<p class="margin-get-started__lead"><?php echo wp_kses( $content['lead'], $cl_inline ); ?></p>
+			<p class="gutter-get-started__lead"><?php echo wp_kses( $content['lead'], $cl_inline ); ?></p>
 		<?php endif; ?>
 
 		<?php if ( ! empty( $content['steps'] ) && is_array( $content['steps'] ) ) : ?>
-			<h2><?php esc_html_e( 'Set up', 'margin' ); ?></h2>
-			<ol class="margin-get-started__steps">
+			<h2><?php esc_html_e( 'Set up', 'gutter' ); ?></h2>
+			<ol class="gutter-get-started__steps">
 				<?php foreach ( $content['steps'] as $step ) : ?>
 					<li>
 						<strong><?php echo esc_html( $step['title'] ?? '' ); ?></strong>
@@ -325,19 +325,19 @@ function render_get_started_page(): void {
 		<?php endif; ?>
 
 		<?php if ( ! empty( $content['optimize'] ) && is_array( $content['optimize'] ) ) : ?>
-			<h2><?php esc_html_e( 'Optimize', 'margin' ); ?></h2>
+			<h2><?php esc_html_e( 'Optimize', 'gutter' ); ?></h2>
 			<?php foreach ( $content['optimize'] as $para ) : ?>
 				<p><?php echo wp_kses( $para, $cl_inline ); ?></p>
 			<?php endforeach; ?>
 		<?php endif; ?>
 
 		<?php if ( ! empty( $content['credit'] ) ) : ?>
-			<h2><?php esc_html_e( 'The footer credit', 'margin' ); ?></h2>
+			<h2><?php esc_html_e( 'The footer credit', 'gutter' ); ?></h2>
 			<p><?php echo wp_kses( $content['credit'], $cl_inline ); ?></p>
 		<?php endif; ?>
 
 		<?php if ( ! empty( $content['developers']['text'] ) ) : ?>
-			<h2><?php esc_html_e( 'For developers', 'margin' ); ?></h2>
+			<h2><?php esc_html_e( 'For developers', 'gutter' ); ?></h2>
 			<p>
 				<?php
 				$dev  = $content['developers'];
