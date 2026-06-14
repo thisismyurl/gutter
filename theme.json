@@ -556,7 +556,7 @@
           "fontSize": "var(--wp--preset--font-size--xs)"
         },
         "color": {
-          "text": "var(--wp--preset--color--ink-faint)"
+          "text": "var(--wp--preset--color--ink-muted)"
         }
       },
       "core/post-terms": {
@@ -592,7 +592,7 @@
           "textTransform": "uppercase"
         },
         "color": {
-          "text": "var(--wp--preset--color--ink-faint)"
+          "text": "var(--wp--preset--color--ink-muted)"
         }
       },
       "core/navigation": {

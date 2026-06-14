@@ -4,76 +4,123 @@
   "title": "Terminal",
   "settings": {
     "custom": {
-      "colophon-light": "#0A0A0A",
-      "colophon-dark": "#E8E4D8",
-      "colophon-accent": "#4A9A6A"
+      "colophon-light": "#0a0c0e",
+      "colophon-dark": "#f0ede6",
+      "colophon-accent": "#e6a817"
+    },
+    "color": {
+      "palette": [
+        {
+          "slug": "ink-deep",
+          "color": "#f0ede6",
+          "name": "Ink Deep"
+        },
+        {
+          "slug": "ink-primary",
+          "color": "#d8d4cb",
+          "name": "Ink Primary"
+        },
+        {
+          "slug": "ink-muted",
+          "color": "#9a9589",
+          "name": "Ink Muted"
+        },
+        {
+          "slug": "ink-faint",
+          "color": "#6a665d",
+          "name": "Ink Faint"
+        },
+        {
+          "slug": "rule",
+          "color": "#2a2620",
+          "name": "Rule"
+        },
+        {
+          "slug": "rule-light",
+          "color": "#1e1b17",
+          "name": "Rule Light"
+        },
+        {
+          "slug": "ground",
+          "color": "#0a0c0e",
+          "name": "Ground"
+        },
+        {
+          "slug": "paper",
+          "color": "#0d0b07",
+          "name": "Paper"
+        },
+        {
+          "slug": "white",
+          "color": "#141109",
+          "name": "White"
+        },
+        {
+          "slug": "accent",
+          "color": "#e6a817",
+          "name": "Accent"
+        },
+        {
+          "slug": "accent-tint",
+          "color": "#1e1a0a",
+          "name": "Accent Tint"
+        },
+        {
+          "slug": "positive",
+          "color": "#4caf7d",
+          "name": "Positive"
+        },
+        {
+          "slug": "negative",
+          "color": "#ef5350",
+          "name": "Negative"
+        }
+      ]
     }
   },
   "styles": {
     "color": {
-      "background": "var(--wp--preset--color--ink-deep)",
-      "text": "var(--wp--preset--color--paper)"
+      "background": "var(--wp--preset--color--ground)",
+      "text": "var(--wp--preset--color--ink-primary)"
     },
     "elements": {
-      "h1": {
+      "heading": {
         "color": {
-          "text": "var(--wp--preset--color--paper)"
-        }
-      },
-      "h2": {
-        "color": {
-          "text": "var(--wp--preset--color--paper)"
-        }
-      },
-      "h3": {
-        "color": {
-          "text": "var(--wp--preset--color--paper)"
+          "text": "var(--wp--preset--color--ink-deep)"
         }
       },
       "link": {
         "color": {
-          "text": "var(--wp--preset--color--accent-tint)"
+          "text": "var(--wp--preset--color--accent)"
         },
         ":hover": {
           "color": {
-            "text": "var(--wp--preset--color--paper)"
+            "text": "var(--wp--preset--color--ink-deep)"
           }
         }
       },
       "button": {
         "color": {
-          "background": "var(--wp--preset--color--accent-tint)",
-          "text": "var(--wp--preset--color--ink-deep)"
+          "background": "var(--wp--preset--color--accent)",
+          "text": "var(--wp--preset--color--ground)"
         },
         ":hover": {
           "color": {
-            "background": "var(--wp--preset--color--paper)"
+            "background": "var(--wp--preset--color--paper)",
+            "text": "var(--wp--preset--color--ink-deep)"
           }
         }
       }
     },
     "blocks": {
-      "core/post-title": {
-        "color": {
-          "text": "var(--wp--preset--color--paper)"
-        }
-      },
-      "core/post-date": {
-        "color": {
-          "text": "var(--wp--preset--color--ink-faint)"
-        }
-      },
       "core/site-title": {
         "color": {
-          "text": "var(--wp--preset--color--paper)"
+          "text": "var(--wp--preset--color--ink-deep)"
         }
       },
-      "core/separator": {
+      "core/navigation": {
         "color": {
-          "text": "rgba(255,255,255,0.15)"
-        },
-        "border": {
-          "color": "rgba(255,255,255,0.15)"
+          "text": "var(--wp--preset--color--ink-primary)"
         }
       }
     }

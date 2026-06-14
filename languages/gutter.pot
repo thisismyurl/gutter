@@ -1,0 +1,218 @@
+# Copyright (C) 2026 Christopher Ross
+# This file is distributed under the same license as the Gutter package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Gutter 1.6164.1430\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/gutter\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-13T00:00:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.x\n"
+"X-Domain: gutter\n"
+
+#. Theme Name of the theme
+msgid "Gutter"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://thisismyurl.com/gutter/"
+msgstr ""
+
+#. Description of the theme
+msgid "A WordPress theme for financial research publishers — the investment research firms, economic think tanks, and capital markets publications that lead with data, not decoration. IBM Plex Serif for editorial authority, IBM Plex Sans for interface precision, IBM Plex Mono for every number. The data table is the hero. Built on the Colophon core: WCAG 2.2 AA accessibility guidance, Core Web Vitals optimised, self-hosted SIL OFL fonts, RTL-ready via CSS logical properties, zero plugin dependencies."
+msgstr ""
+
+#. Author of the theme
+msgid "Christopher Ross"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://thisismyurl.com/"
+msgstr ""
+
+#: inc/bindings.php
+msgid "Copyright line"
+msgstr ""
+
+#: inc/bindings.php
+msgid "Footer credit line"
+msgstr ""
+
+#: inc/bindings.php
+#. translators: 1: four-digit year, 2: site title.
+msgid "© %1$s %2$s. All rights reserved."
+msgstr ""
+
+#: inc/bindings.php
+#. translators: %s: linked theme name.
+msgid "Built with the %s theme."
+msgstr ""
+
+#: inc/setup.php
+msgid "Primary Navigation"
+msgstr ""
+
+#: inc/setup.php
+msgid "Footer Navigation"
+msgstr ""
+
+#: inc/setup.php
+msgid "Skip to content"
+msgstr ""
+
+#: inc/skin.php
+msgid "Data label"
+msgstr ""
+
+#: inc/skin.php
+msgid "Overweight signal"
+msgstr ""
+
+#: inc/skin.php
+msgid "Underweight signal"
+msgstr ""
+
+#: inc/skin.php
+msgid "Terminal display"
+msgstr ""
+
+#: inc/skin.php
+msgid "Pull statistic"
+msgstr ""
+
+#: inc/skin.php
+msgid "Gutter: Data"
+msgstr ""
+
+#: inc/skin.php
+msgid "Market data tables, sector tables, and key metrics patterns."
+msgstr ""
+
+#: inc/skin.php
+msgid "Gutter: Editorial"
+msgstr ""
+
+#: inc/skin.php
+msgid "Research heroes, article headers, and report covers."
+msgstr ""
+
+#: inc/skin.php
+msgid "Gutter: Archive"
+msgstr ""
+
+#: inc/skin.php
+msgid "Research card grids and post archive patterns."
+msgstr ""
+
+#: inc/skin.php
+msgid "Gutter: Reports"
+msgstr ""
+
+#: inc/skin.php
+msgid "Report calls to action, section navigation, and the site footer."
+msgstr ""
+
+#: inc/admin.php
+#. translators: %s: theme name.
+msgid "%s: Get started"
+msgstr ""
+
+#: inc/admin.php
+#. translators: %s: theme name.
+msgid "Welcome to %s."
+msgstr ""
+
+#: inc/admin.php
+msgid "Thanks for giving it a home. A few small steps will have your site reading the way it should."
+msgstr ""
+
+#: inc/admin.php
+#. translators: %s: theme name.
+msgid "Set up %s →"
+msgstr ""
+
+#: inc/admin.php
+msgid "Dismiss"
+msgstr ""
+
+#: inc/admin.php
+msgid "You do not have permission to do that."
+msgstr ""
+
+#: inc/admin.php
+#. translators: %s: theme name.
+msgid "%s is a free, full-site-editing theme built to get out of the way of your content. Here is how to make it yours."
+msgstr ""
+
+#: inc/admin.php
+msgid "Choose what people land on."
+msgstr ""
+
+#: inc/admin.php
+msgid "A visitor's first second decides whether they stay. Set a static front page under Settings → Reading, and give your posts a page of their own."
+msgstr ""
+
+#: inc/admin.php
+msgid "Give people a way around."
+msgstr ""
+
+#: inc/admin.php
+msgid "A site without a menu is a room without doors. Open the Site Editor, edit the header, and assign your menu to Primary Navigation."
+msgstr ""
+
+#: inc/admin.php
+msgid "Start from a pattern, not a blank page."
+msgstr ""
+
+#: inc/admin.php
+msgid "In any page or post, open the block inserter, choose Patterns, and find this theme's group. Drop one in and change the words."
+msgstr ""
+
+#: inc/admin.php
+msgid "Make it sound like you."
+msgstr ""
+
+#: inc/admin.php
+msgid "In the Site Editor, open Styles to change colours and typefaces. Nothing you do there can break the theme — experiment freely."
+msgstr ""
+
+#: inc/admin.php
+msgid "This theme is already fast by design: minimal JavaScript — the Interactivity API only on the market-watch pattern — self-hosted fonts that don't phone home, and tuning against the Core Web Vitals search engines actually measure."
+msgstr ""
+
+#: inc/admin.php
+msgid "It is built to WCAG 2.2 AA guidance — real focus outlines, a skip link, sensible heading order, and motion that respects a reduce-motion setting. Keep your own copy and images to that bar and the whole site stays welcoming."
+msgstr ""
+
+#: inc/admin.php
+msgid "There's a small credit in your footer. It's a thank-you, not a tax — remove it in two clicks in the Site Editor → Footer, or filter it out in code. No hard feelings either way."
+msgstr ""
+
+#: inc/admin.php
+#. translators: %s: linked developer-guide anchor.
+msgid "This theme is built on Colophon, a small documented core meant to be reused. The %s walks through how to build your own theme on it."
+msgstr ""
+
+#: inc/admin.php
+msgid "developer guide"
+msgstr ""
+
+#: inc/admin.php
+msgid "Set up"
+msgstr ""
+
+#: inc/admin.php
+msgid "Optimize"
+msgstr ""
+
+#: inc/admin.php
+msgid "The footer credit"
+msgstr ""
+
+#: inc/admin.php
+msgid "For developers"
+msgstr ""

@@ -17,8 +17,8 @@
 		<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-serif","fontWeight":"300","fontSize":"var:preset|font-size|xl","letterSpacing":"-0.02em"},"color":{"text":"var:preset|color|ink-deep"}}} -->
 		<h2 style="font-family:var(--wp--preset--font-family--plex-serif);font-weight:300;font-size:var(--wp--preset--font-size--xl);letter-spacing:-0.02em;color:var(--wp--preset--color--ink-deep)">Market Watch</h2>
 		<!-- /wp:heading -->
-		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|xs"},"color":{"text":"var:preset|color|ink-faint"}}} -->
-		<p style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--xs);color:var(--wp--preset--color--ink-faint)">Updated 14 Jun 2026</p>
+		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|xs"},"color":{"text":"var:preset|color|ink-muted"}}} -->
+		<p style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--xs);color:var(--wp--preset--color--ink-muted)">Updated 14 Jun 2026</p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
@@ -28,7 +28,7 @@
 	<div class="gutter-market-watch" style="margin-top:var(--wp--preset--spacing--6)">
 		<table
 			data-wp-interactive="gutter-market-watch"
-			data-wp-init="callbacks.init"
+			data-wp-context='{"activeRow":-1}'
 		>
 			<thead>
 				<tr>
@@ -42,8 +42,11 @@
 			</thead>
 			<tbody>
 				<tr
-					data-wp-on--click="callbacks.selectRow"
-					data-wp-class--is-row-active="state.activeRow === 0"
+					tabindex="0"
+					data-wp-on--click="actions.selectRow"
+					data-wp-on--keydown="actions.selectRowOnKey"
+					data-wp-context='{"row":0}'
+					data-wp-class--is-row-active="state.isActiveRow"
 				>
 					<td style="font-weight:500">NEP</td>
 					<td>NextEra Energy Partners</td>
@@ -53,8 +56,11 @@
 					<td><span class="is-style-gutter-overweight">Overweight</span></td>
 				</tr>
 				<tr
-					data-wp-on--click="callbacks.selectRow"
-					data-wp-class--is-row-active="state.activeRow === 1"
+					tabindex="0"
+					data-wp-on--click="actions.selectRow"
+					data-wp-on--keydown="actions.selectRowOnKey"
+					data-wp-context='{"row":1}'
+					data-wp-class--is-row-active="state.isActiveRow"
 				>
 					<td style="font-weight:500">BEP</td>
 					<td>Brookfield Renewable Partners</td>
@@ -64,8 +70,11 @@
 					<td><span class="is-style-gutter-overweight">Overweight</span></td>
 				</tr>
 				<tr
-					data-wp-on--click="callbacks.selectRow"
-					data-wp-class--is-row-active="state.activeRow === 2"
+					tabindex="0"
+					data-wp-on--click="actions.selectRow"
+					data-wp-on--keydown="actions.selectRowOnKey"
+					data-wp-context='{"row":2}'
+					data-wp-class--is-row-active="state.isActiveRow"
 				>
 					<td style="font-weight:500">PPL</td>
 					<td>PPL Corporation</td>
@@ -75,8 +84,11 @@
 					<td><span class="is-style-gutter-underweight">Underweight</span></td>
 				</tr>
 				<tr
-					data-wp-on--click="callbacks.selectRow"
-					data-wp-class--is-row-active="state.activeRow === 3"
+					tabindex="0"
+					data-wp-on--click="actions.selectRow"
+					data-wp-on--keydown="actions.selectRowOnKey"
+					data-wp-context='{"row":3}'
+					data-wp-class--is-row-active="state.isActiveRow"
 				>
 					<td style="font-weight:500">AES</td>
 					<td>AES Corporation</td>
@@ -90,8 +102,8 @@
 	</div>
 	<!-- /wp:html -->
 
-	<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|4"}},"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|2xs"},"color":{"text":"var:preset|color|ink-faint"}}} -->
-	<p style="margin-top:var(--wp--preset--spacing--4);font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2xs);color:var(--wp--preset--color--ink-faint)">Data for illustrative purposes only. Click a row to highlight. Not investment advice.</p>
+	<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|4"}},"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|2xs"},"color":{"text":"var:preset|color|ink-muted"}}} -->
+	<p style="margin-top:var(--wp--preset--spacing--4);font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2xs);color:var(--wp--preset--color--ink-muted)">Data for illustrative purposes only. Click or press Enter on a row to highlight it. Not investment advice.</p>
 	<!-- /wp:paragraph -->
 
 </div>

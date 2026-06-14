@@ -11,25 +11,15 @@
    first tool.
    ===================================================================== */
 
-/* Mirror the gutter-eyebrow component for the editor preview */
-.editor-styles-wrapper .is-style-gutter-eyebrow {
-	font-size: 0.6875rem;
-	font-weight: 600;
-	letter-spacing: 0.14em;
+/* Mirror the data-label block style in the editor preview. The treatment lives
+   in skin.css @layer components for the front end; this rule gives the editor the
+   same caption look. The colour uses the ink-muted preset token so it tracks the
+   active style variation rather than a hardcoded grey. */
+.editor-styles-wrapper .is-style-gutter-data-label {
+	font-family: var(--wp--preset--font-family--plex-mono);
+	font-size: var(--wp--preset--font-size--2xs);
+	font-weight: 400;
+	letter-spacing: 0.08em;
 	text-transform: uppercase;
-	color: #6b6b68;
-}
-
-/* Mirror the annotation style */
-.editor-styles-wrapper .is-style-gutter-annotation {
-	font-size: 0.75rem;
-	letter-spacing: 0.06em;
-	color: #6b6b68;
-}
-
-/* Directory entry: top rule visible in editor */
-.editor-styles-wrapper .is-style-gutter-directory-entry {
-	border-top: 1px solid #d6d3cc;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	color: var(--wp--preset--color--ink-muted);
 }

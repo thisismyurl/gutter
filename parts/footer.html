@@ -32,11 +32,19 @@
 	<!-- Copyright row in plex-mono -->
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"},"style":{"spacing":{"blockGap":"var:preset|spacing|4"}}} -->
 	<div class="wp-block-group">
-		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|2xs","letterSpacing":"0.04em"},"color":{"text":"var:preset|color|ink-faint"}}} -->
-		<p class="has-text-color" style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2xs);letter-spacing:0.04em;color:var(--wp--preset--color--ink-faint)">&copy; [year] &mdash; All rights reserved.</p>
+		<!-- Copyright line bound to the gutter/copyright source (WP 6.5+ block
+		     bindings, registered in inc/bindings.php). The callback composes the
+		     translatable "© {year} {site}. All rights reserved." sentence so the
+		     year stays live and the string is never hardcoded in this template. -->
+		<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"gutter/copyright"}}},"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|2xs","letterSpacing":"0.04em"},"color":{"text":"var:preset|color|ink-faint"}}} -->
+		<p class="has-text-color" style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2xs);letter-spacing:0.04em;color:var(--wp--preset--color--ink-faint)"></p>
 		<!-- /wp:paragraph -->
-		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|2xs","letterSpacing":"0.04em"},"color":{"text":"var:preset|color|ink-faint"}}} -->
-		<p class="has-text-color" style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2xs);letter-spacing:0.04em;color:var(--wp--preset--color--ink-faint)">Built with <a href="https://wordpress.org" style="color:inherit">WordPress</a> &amp; Gutter</p>
+		<!-- Credit line bound to the gutter/footer-credit source. The callback
+		     reads the theme's own Name and Theme URI from style.css, so no theme
+		     name is hardcoded here, and an integrator can rewrite or remove the
+		     credit through the gutter/footer_credit filter without a template edit. -->
+		<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"gutter/footer-credit"}}},"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|2xs","letterSpacing":"0.04em"},"color":{"text":"var:preset|color|ink-faint"}}} -->
+		<p class="has-text-color" style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2xs);letter-spacing:0.04em;color:var(--wp--preset--color--ink-faint)"></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->

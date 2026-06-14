@@ -28,12 +28,12 @@ defined( 'ABSPATH' ) || exit;
  * An option, not a transient: it must survive an object-cache flush and clear
  * deterministically. Stored autoload=no — it is read only on wp-admin requests.
  */
-const WELCOME_FLAG = 'margin_welcome_notice'; // hardcoded slug — CLI rewrites on re-skin.
+const WELCOME_FLAG = 'gutter_welcome_notice'; // hardcoded slug — CLI rewrites on re-skin.
 
 /**
  * Admin-post action and nonce action string for dismissing the welcome notice.
  */
-const DISMISS_ACTION = 'margin_dismiss_welcome'; // hardcoded slug — CLI rewrites on re-skin.
+const DISMISS_ACTION = 'gutter_dismiss_welcome'; // hardcoded slug — CLI rewrites on re-skin.
 
 /**
  * Admin-menu slug for the Get-started page.
@@ -104,7 +104,7 @@ function get_onboarding_capability(): string {
 	 * Raise to 'manage_options' on multi-author sites where editors should not
 	 * see theme onboarding. Lower to any custom capability for a tighter fit.
 	 *
-	 * @since 1.6150
+	 * @since 1.0.0
 	 *
 	 * @param string $capability WordPress capability slug.
 	 */
@@ -246,8 +246,8 @@ function get_started_content(): array {
 			),
 		),
 		'optimize'   => array(
-			__( "This theme is already fast by design: zero front-end JavaScript, self-hosted fonts that don't phone home, and tuning against the Core Web Vitals search engines actually measure.", 'gutter' ),
-			__( 'It meets WCAG 2.2 AA — real focus outlines, a skip link, sensible heading order, and motion that respects a reduce-motion setting. Keep your own copy and images to that bar and the whole site stays welcoming.', 'gutter' ),
+			__( "This theme is already fast by design: minimal JavaScript — the Interactivity API only on the market-watch pattern — self-hosted fonts that don't phone home, and tuning against the Core Web Vitals search engines actually measure.", 'gutter' ),
+			__( 'It is built to WCAG 2.2 AA guidance — real focus outlines, a skip link, sensible heading order, and motion that respects a reduce-motion setting. Keep your own copy and images to that bar and the whole site stays welcoming.', 'gutter' ),
 		),
 		'credit'     => __( "There's a small credit in your footer. It's a thank-you, not a tax — remove it in two clicks in the Site Editor → Footer, or filter it out in code. No hard feelings either way.", 'gutter' ),
 		'developers' => array(
