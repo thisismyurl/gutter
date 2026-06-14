@@ -10,7 +10,7 @@
 
    Everything here is design-neutral. No colours, no type, no spacing
    values — those are the skin's job. `colophon sync` owns this file;
-   don't add Kern's personality here. It lives in skin.css.
+   don't add the skin's personality here. It lives in skin.css.
 
    Pillar 6 (Resilience): the reduced-motion guard at the bottom is a
    global kill-switch. Any skin animation is neutralised here; skins
@@ -58,7 +58,7 @@
 		 *
 		 * overflow-x: hidden on body creates a new block formatting context,
 		 * which breaks position: sticky on child elements in Safari — directly
-		 * affecting the sticky navigation headers in Wake, Masthead, and Kern.
+		 * affecting sticky navigation headers across the Colophon theme line.
 		 * It also silently conceals horizontal overflow bugs in plugin content
 		 * rather than surfacing them. If a specific template needs overflow
 		 * containment, apply it at that component, not globally.

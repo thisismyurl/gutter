@@ -188,16 +188,43 @@ function comment_form_field_attributes( array $fields ): array {
 }
 add_filter( 'comment_form_default_fields', __NAMESPACE__ . '\\comment_form_field_attributes' );
 
-/*
- * Skip link — NOT registered here.
+/**
+ * Render the keyboard skip link immediately after the opening <body> tag.
  *
- * Every theme template carries the skip link in its header template part
- * (parts/header.html), rendered via wp:html. Registering a second one here
- * via wp_body_open produced a duplicate in the rendered DOM — two visible
- * "Skip to content" links on Tab keypress, one of which targeted a
- * non-existent anchor. The template-part approach is correct: it is always
- * in the rendered markup, it is in the right DOM position, and there is
- * exactly one of it.
+ * The skip link is rendered here, in PHP, rather than as a wp:html literal in
+ * parts/header.html, for one reason: i18n. A static HTML template part cannot
+ * wrap its text in a gettext call, so "Skip to content" shipped as an
+ * untranslatable English literal — a non-English site saw English. Rendering it
+ * on wp_body_open lets the label pass through esc_html_e(), so it translates
+ * with the rest of the theme and lands in languages/gutter.pot.
  *
- * See parts/header.html for the authoritative skip link.
+ * It is rendered exactly once (wp_body_open fires once per request, before any
+ * template part), in the correct DOM position (first focusable element), and it
+ * targets #main-content — the id every template's <main> carries. The earlier
+ * duplicate came from rendering it here AND in the header part; the header part
+ * no longer carries one, so there is exactly one skip link again.
+ *
+ * page-blank.html omits header and footer for full-canvas layouts but still
+ * exposes #main-content, so the skip link stays valid there too.
+ *
+ * Pillar 5 (Safe by Default): the skip link is on by default, in every template,
+ * and translatable.
  */
+function render_skip_link(): void {
+	printf(
+		'<a class="skip-link screen-reader-text" href="#main-content">%s</a>',
+		/**
+		 * Filters the skip-link label.
+		 *
+		 * Lets a child theme or companion plugin change the visible skip-link
+		 * text without editing a template. The returned string is escaped with
+		 * esc_html() on output.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param string $label The default skip-link label.
+		 */
+		esc_html( (string) apply_filters( 'gutter/skip_link_text', __( 'Skip to content', 'gutter' ) ) )
+	);
+}
+add_action( 'wp_body_open', __NAMESPACE__ . '\\render_skip_link' );

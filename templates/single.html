@@ -3,8 +3,8 @@
      Structure: header → post header (title + meta) → featured image →
      post content → post navigation → footer.
 
-     Typography drives the hierarchy: title at display scale in Fraunces,
-     body at Jakarta 1.7 line-height, pull-quotes in the specimen-display style.
+     Typography drives the hierarchy: title at display scale in IBM Plex Serif,
+     body at IBM Plex Sans 1.7 line-height, pull-quotes in the specimen-display style.
 
      Pillar 8 (Kodawari): every typographic detail here is intentional — the
      space above the title, the rule above the meta, the constrained prose width.
@@ -46,6 +46,48 @@
 
 	</div>
 	<!-- /wp:group -->
+
+	<!-- Comments: discussion on a research note, shown only when open. The
+	     comments-title h2 keeps the heading order beneath the post-title h1. -->
+	<!-- wp:comments {"className":"gutter-comments","layout":{"type":"constrained","contentSize":"720px"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|12"}}}} -->
+	<div class="wp-block-comments gutter-comments" style="padding-top:var(--wp--preset--spacing--12)">
+
+		<!-- wp:comments-title {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-sans","fontSize":"var:preset|font-size|lg","fontWeight":"500"},"spacing":{"margin":{"bottom":"var:preset|spacing|8"}}},"color":{"text":"var:preset|color|ink-primary"}} /-->
+
+		<!-- wp:comment-template -->
+		<!-- wp:columns {"style":{"spacing":{"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}}} -->
+		<div class="wp-block-columns" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6)">
+			<!-- wp:column {"width":"40px"} -->
+			<div class="wp-block-column" style="flex-basis:40px">
+				<!-- wp:avatar {"size":40} /-->
+			</div>
+			<!-- /wp:column -->
+			<!-- wp:column -->
+			<div class="wp-block-column">
+				<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+				<div class="wp-block-group">
+					<!-- wp:comment-author-name {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-sans","fontWeight":"500","fontSize":"var:preset|font-size|sm"}}} /-->
+					<!-- wp:comment-date {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|xs"},"color":{"text":"var:preset|color|ink-muted"}}} /-->
+				</div>
+				<!-- /wp:group -->
+				<!-- wp:comment-content {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-sans","lineHeight":"1.7"}}} /-->
+				<!-- wp:comment-reply-link {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-sans","fontSize":"var:preset|font-size|sm","fontWeight":"500"}}} /-->
+			</div>
+			<!-- /wp:column -->
+		</div>
+		<!-- /wp:columns -->
+		<!-- /wp:comment-template -->
+
+		<!-- wp:comments-pagination -->
+		<!-- wp:comments-pagination-previous /-->
+		<!-- wp:comments-pagination-numbers /-->
+		<!-- wp:comments-pagination-next /-->
+		<!-- /wp:comments-pagination -->
+
+		<!-- wp:post-comments-form /-->
+
+	</div>
+	<!-- /wp:comments -->
 
 </main>
 <!-- /wp:group -->

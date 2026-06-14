@@ -25,7 +25,7 @@
 	</div>
 	<!-- /wp:group -->
 
-	<!-- Post list: same typographic index as front-page works directory -->
+	<!-- Post list: same typographic index as the front-page research list -->
 	<!-- wp:query {"queryId":1,"query":{"perPage":10,"postType":"post","order":"desc","orderBy":"date","inherit":true},"layout":{"type":"default"}} -->
 	<div class="wp-block-query">
 
@@ -35,16 +35,24 @@
 			<div class="wp-block-group" style="padding-bottom:var(--wp--preset--spacing--10);margin-bottom:var(--wp--preset--spacing--10);border-bottom:1px solid var(--wp--preset--color--rule)">
 				<!-- wp:template-part {"slug":"post-meta","tagName":"div"} /-->
 				<!-- wp:post-title {"isLink":true,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-serif","fontWeight":"400","fontSize":"var:preset|font-size|2xl","letterSpacing":"-0.01em","textDecoration":"none"},"color":{"text":"var:preset|color|ink-primary"}}} /-->
-				<!-- wp:post-excerpt {"moreText":"Read more","style":{"typography":{"fontFamily":"var:preset|font-family|plex-sans","lineHeight":"1.7"},"color":{"text":"var:preset|color|ink-primary"}}} /-->
+				<!-- post-excerpt without a moreText override: core supplies its own
+				     translatable "read more" link text, so no English literal is
+				     hardcoded in the template. -->
+				<!-- wp:post-excerpt {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-sans","lineHeight":"1.7"},"color":{"text":"var:preset|color|ink-primary"}}} /-->
 			</div>
 			<!-- /wp:group -->
 
 		<!-- /wp:post-template -->
 
+		<!-- No-results state: the archive h1 (query-title above) names the term
+			     and the search form offers a recovery path. No hardcoded English
+			     prose; the form label is translatable through core. -->
 		<!-- wp:query-no-results -->
-			<!-- wp:paragraph {"className":"is-style-gutter-annotation","style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|12"}}}} -->
-			<p class="is-style-gutter-annotation" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12)">Nothing in this archive yet.</p>
-			<!-- /wp:paragraph -->
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|12"},"blockGap":"var:preset|spacing|6"}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12)">
+				<!-- wp:search {"label":"Search","buttonText":"Search","buttonUseIcon":true,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-sans"}}} /-->
+			</div>
+			<!-- /wp:group -->
 		<!-- /wp:query-no-results -->
 
 		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->

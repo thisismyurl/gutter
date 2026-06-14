@@ -20,10 +20,17 @@ namespace Gutter;
 
 defined( 'ABSPATH' ) || exit;
 
-// Opt this theme into GitHub-release self-updates (see inc/github-updater.php).
-add_filter( 'gutter/github_updater_repo', static function (): string {{
-	return 'thisismyurl/margin';
-}} );
+// Opt this theme into GitHub-release self-updates, but only when the updater
+// actually ships. inc/github-updater.php is [REMOVABLE] and absent in the
+// WordPress.org build (functions.php loads it behind the same file_exists guard),
+// so registering the filter unconditionally would leave a live reference to a
+// file that does not exist. Guarding it here keeps the SKIN file honest: no
+// dangling hook for a feature that isn't installed.
+if ( file_exists( DIR . '/inc/github-updater.php' ) ) {
+	add_filter( 'gutter/github_updater_repo', static function (): string {
+		return 'thisismyurl/gutter';
+	} );
+}
 
 /**
  * Register Gutter's image crop sizes.
@@ -122,6 +129,60 @@ function skin_block_styles(): void {
 add_action( 'init', __NAMESPACE__ . '\\skin_block_styles' );
 
 /**
+ * Register the market-watch Interactivity API view module.
+ *
+ * Registered (not enqueued) on init so it is available to enqueue on demand.
+ * It depends on @wordpress/interactivity, the core module that ships the store
+ * runtime; WordPress loads both as ES modules, so there is no global script and
+ * no jQuery. The actual enqueue is conditional — see enqueue_market_watch_view().
+ *
+ * Guarded on wp_register_script_module() so the theme degrades cleanly on any
+ * pre-6.5 install that slips past the "Requires at least" header: without the
+ * Script Modules API the table simply stays a static, fully readable table.
+ */
+function register_market_watch_view(): void {
+	if ( ! function_exists( 'wp_register_script_module' ) ) {
+		return;
+	}
+
+	$path = DIR . '/assets/js/market-watch-view.js';
+	if ( ! file_exists( $path ) ) {
+		return;
+	}
+
+	wp_register_script_module(
+		SLUG . '-market-watch-view',
+		URI . '/assets/js/market-watch-view.js',
+		array( '@wordpress/interactivity' ),
+		(string) filemtime( $path )
+	);
+}
+add_action( 'init', __NAMESPACE__ . '\\register_market_watch_view' );
+
+/**
+ * Enqueue the market-watch view module only on pages that render the pattern.
+ *
+ * The pattern is a wp:html block, so its rendered output carries the
+ * data-wp-interactive marker. Detecting it here means the Interactivity runtime
+ * loads only where the table actually appears — zero JavaScript on every other
+ * page. The module is registered once (above) and enqueued at most once.
+ *
+ * @param string $block_content The rendered block HTML.
+ * @return string The block HTML, unchanged.
+ */
+function enqueue_market_watch_view( string $block_content ): string {
+	if (
+		function_exists( 'wp_enqueue_script_module' )
+		&& false !== strpos( $block_content, 'data-wp-interactive="gutter-market-watch"' )
+	) {
+		wp_enqueue_script_module( SLUG . '-market-watch-view' );
+	}
+
+	return $block_content;
+}
+add_filter( 'render_block_core/html', __NAMESPACE__ . '\\enqueue_market_watch_view' );
+
+/**
  * Register Gutter's block pattern categories.
  *
  * Patterns auto-register from patterns/ (WordPress 6.0+). These categories
@@ -151,6 +212,14 @@ function skin_pattern_categories(): void {
 		array(
 			'label'       => __( 'Gutter: Archive', 'gutter' ),
 			'description' => __( 'Research card grids and post archive patterns.', 'gutter' ),
+		)
+	);
+
+	register_block_pattern_category(
+		'gutter-reports',
+		array(
+			'label'       => __( 'Gutter: Reports', 'gutter' ),
+			'description' => __( 'Report calls to action, section navigation, and the site footer.', 'gutter' ),
 		)
 	);
 }

@@ -16,8 +16,10 @@
 		<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-serif","fontWeight":"300","fontSize":"var:preset|font-size|xl","letterSpacing":"-0.02em"},"color":{"text":"var:preset|color|ink-deep"}}} -->
 		<h2 style="font-family:var(--wp--preset--font-family--plex-serif);font-weight:300;font-size:var(--wp--preset--font-size--xl);letter-spacing:-0.02em;color:var(--wp--preset--color--ink-deep)">Latest Research</h2>
 		<!-- /wp:heading -->
+		<!-- "All reports" points at the site root by default so it is never a dead
+			 link on a fresh install. Repoint it at your posts or reports page in the editor. -->
 		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|xs"},"color":{"text":"var:preset|color|accent"}}} -->
-		<p style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--xs);color:var(--wp--preset--color--accent)"><a href="/research" style="color:inherit;text-decoration:none">All reports →</a></p>
+		<p style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--xs);color:var(--wp--preset--color--accent)"><a href="/" style="color:inherit;text-decoration:none">All reports →</a></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
@@ -31,12 +33,14 @@
 
 			<!-- wp:post-excerpt {"moreText":"Read report","showMoreOnNewLine":false,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-sans","fontSize":"var:preset|font-size|sm","lineHeight":"1.6"},"color":{"text":"var:preset|color|ink-muted"},"spacing":{"margin":{"top":"var:preset|spacing|3"}}}} /-->
 
-			<!-- wp:post-date {"format":"j M Y","style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|xs"},"color":{"text":"var:preset|color|ink-faint"},"spacing":{"margin":{"top":"var:preset|spacing|4"}}}} /-->
+			<!-- wp:post-date {"format":"j M Y","style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|xs"},"color":{"text":"var:preset|color|ink-muted"},"spacing":{"margin":{"top":"var:preset|spacing|4"}}}} /-->
 		<!-- /wp:post-template -->
 
+		<!-- This is a PHP-rendered pattern, so the no-results line is translatable
+			 at render time through esc_html_e(); it is not a literal in block markup. -->
 		<!-- wp:query-no-results -->
 			<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-sans"},"color":{"text":"var:preset|color|ink-muted"}}} -->
-			<p style="font-family:var(--wp--preset--font-family--plex-sans);color:var(--wp--preset--color--ink-muted)">No research reports published yet.</p>
+			<p style="font-family:var(--wp--preset--font-family--plex-sans);color:var(--wp--preset--color--ink-muted)"><?php esc_html_e( 'No research reports published yet.', 'gutter' ); ?></p>
 			<!-- /wp:paragraph -->
 		<!-- /wp:query-no-results -->
 	</div>

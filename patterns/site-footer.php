@@ -18,8 +18,13 @@
 
 		<!-- wp:column {"width":"34%"} -->
 		<div class="wp-block-column" style="flex-basis:34%">
-			<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-serif","fontWeight":"300","fontSize":"var:preset|font-size|lg","letterSpacing":"-0.01em"},"color":{"text":"var:preset|color|white"}}} -->
-			<h2 style="font-family:var(--wp--preset--font-family--plex-serif);font-weight:300;font-size:var(--wp--preset--font-size--lg);letter-spacing:-0.01em;color:var(--wp--preset--color--white)">About</h2>
+			<!-- About heading uses the ground token, not white. This pattern's band is
+			     ink-deep with ground as its body text; ground inverts with the palette
+			     so the heading stays a light-on-dark (or dark-on-light) pair in every
+			     style variation, where a fixed white literal would collapse to
+			     light-on-light when ink-deep inverts in the dark variations. -->
+			<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-serif","fontWeight":"300","fontSize":"var:preset|font-size|lg","letterSpacing":"-0.01em"},"color":{"text":"var:preset|color|ground"}}} -->
+			<h2 style="font-family:var(--wp--preset--font-family--plex-serif);font-weight:300;font-size:var(--wp--preset--font-size--lg);letter-spacing:-0.01em;color:var(--wp--preset--color--ground)">About</h2>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-sans","fontSize":"var:preset|font-size|sm","lineHeight":"1.65"},"color":{"text":"var:preset|color|ink-faint"},"spacing":{"margin":{"top":"var:preset|spacing|4"}}}} -->
 			<p style="margin-top:var(--wp--preset--spacing--4);font-family:var(--wp--preset--font-family--plex-sans);font-size:var(--wp--preset--font-size--sm);line-height:1.65;color:var(--wp--preset--color--ink-faint)">Independent research and market intelligence for analysts, economists, and institutional desks. Data-led, methodology-first, published without sponsorship.</p>
@@ -98,8 +103,12 @@
 
 	<!-- wp:group {"className":"gutter-footer-bar","style":{"spacing":{"padding":{"top":"var:preset|spacing|6"},"margin":{"top":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|3"},"border":{"top":{"color":"var:preset|color|ink-primary","style":"solid","width":"1px"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 	<div class="wp-block-group gutter-footer-bar" style="border-top:1px solid var(--wp--preset--color--ink-primary);margin-top:var(--wp--preset--spacing--10);padding-top:var(--wp--preset--spacing--6)">
-		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|xs","letterSpacing":"0.04em"},"color":{"text":"var:preset|color|ink-faint"}}} -->
-		<p style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--xs);letter-spacing:0.04em;color:var(--wp--preset--color--ink-faint)">© 2026 Gutter Research. All rights reserved.</p>
+		<!-- Copyright bound to the gutter/copyright source (inc/bindings.php) so an
+		     inserted copy of this pattern carries the live "© {year} {Site Title}.
+		     All rights reserved." line — translatable, with a year that never goes
+		     stale — instead of a hardcoded English literal. -->
+		<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"gutter/copyright"}}},"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|xs","letterSpacing":"0.04em"},"color":{"text":"var:preset|color|ink-faint"}}} -->
+		<p style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--xs);letter-spacing:0.04em;color:var(--wp--preset--color--ink-faint)"></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|xs","letterSpacing":"0.04em"},"color":{"text":"var:preset|color|ink-faint"}}} -->
 		<p style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--xs);letter-spacing:0.04em;color:var(--wp--preset--color--ink-faint)">Not investment advice. Figures are estimates and subject to revision.</p>

@@ -1,7 +1,11 @@
-/* ── Parametric colour system (Colophon v2) ─────────────────────────────────
-   Three anchor custom props drive the entire neutral + accent scale via
-   color-mix() in OKLCh space. Set in settings.custom (theme.json); overridden
-   per style variation via the same settings.custom key.
+/* ── Parametric colour system (inherited from the Colophon core) ────────────
+   The --colophon-light / --colophon-dark / --colophon-accent anchors below are
+   the Colophon-core token contract this theme is built on (see style.css:
+   "Built on the Colophon core"). They are intentional, not residue: three
+   anchor custom props drive the entire neutral + accent scale via color-mix()
+   in OKLCh space. Set in settings.custom (theme.json) under the wp--custom--
+   colophon-* keys; overridden per style variation via the same settings.custom
+   key.
 
    Derived tokens (--clr-*) are intentionally separate from the block-editor
    palette (--wp--preset--color--*). The palette tokens give the editor
@@ -114,18 +118,24 @@ body {
    ===================================================================== */
 @layer components {
 
-	/* Data label — Plex Mono, ink-faint, small all-caps caption */
+	/* Data label — Plex Mono, small all-caps caption. Coloured with ink-muted,
+	   not ink-faint: these labels sit on the page ground beside figures, where
+	   ink-faint is a decorative-weight grey that does not clear AA as readable
+	   text. ink-muted clears 4.5:1 on every variation's page ground while still
+	   reading as a quieter caption than body copy. */
 	.is-style-gutter-data-label {
 		font-family: var(--wp--preset--font-family--plex-mono) !important;
 		font-size: var(--wp--preset--font-size--2xs) !important;
 		font-weight: 400 !important;
 		letter-spacing: 0.08em !important;
 		text-transform: uppercase !important;
-		color: var(--wp--preset--color--ink-faint) !important;
+		color: var(--wp--preset--color--ink-muted) !important;
 		line-height: 1.4 !important;
 	}
 
-	/* Overweight signal — accent blue. #1a4f7a on white = 7.2:1 (AAA). */
+	/* Overweight signal — accent on its own tint. Both are tokens, so the pair
+	   inverts together per style variation and stays AA in every palette
+	   (default accent #1a4f7a on accent-tint #e8f0f6 = 7.5:1). */
 	.is-style-gutter-overweight {
 		font-family: var(--wp--preset--font-family--plex-mono) !important;
 		font-size: var(--wp--preset--font-size--2xs) !important;
@@ -137,7 +147,11 @@ body {
 		padding: 0.125em 0.375em !important;
 	}
 
-	/* Underweight signal — negative red. #8b2020 on white = 7.8:1 (AAA). */
+	/* Underweight signal — negative red on the paper token. The background is the
+	   paper token, not a hardcoded pink: paper inverts with every style variation,
+	   so negative-on-paper clears AA in the default palette AND in the terminal,
+	   night-report, and commodities variations (where a fixed light literal would
+	   strand dark-red text on a dark ground). */
 	.is-style-gutter-underweight {
 		font-family: var(--wp--preset--font-family--plex-mono) !important;
 		font-size: var(--wp--preset--font-size--2xs) !important;
@@ -145,7 +159,7 @@ body {
 		letter-spacing: 0.06em !important;
 		text-transform: uppercase !important;
 		color: var(--wp--preset--color--negative) !important;
-		background: #fbeeee !important;
+		background: var(--wp--preset--color--paper) !important;
 		padding: 0.125em 0.375em !important;
 	}
 
@@ -192,7 +206,13 @@ body {
 	}
 	.gutter-market-watch td:not(:first-child) { text-align: end; }
 	/* Interactivity API row highlight — toggled by wp-interactivity */
+	.gutter-market-watch tbody tr { cursor: pointer; }
 	.gutter-market-watch tr.is-row-active { background: var(--wp--preset--color--accent-tint) !important; }
+	/* Keyboard focus on the focusable rows (tabindex="0") — WCAG 2.4.7 */
+	.gutter-market-watch tbody tr:focus-visible {
+		outline: 2px solid var(--cl-focus-ring, currentColor);
+		outline-offset: -2px;
+	}
 }
 
 /* =====================================================================
@@ -208,6 +228,23 @@ body {
 	.wp-block-table th {
 		border-color: var(--wp--preset--color--rule);
 		padding: var(--wp--preset--spacing--3) var(--wp--preset--spacing--4);
+	}
+
+	/* Striped-table zebra — bind core's hardcoded #f0f0f0 odd-row fill to a token.
+	   Core's is-style-stripes sets a fixed light-grey background on odd rows, which
+	   strands body text on a light stripe in the dark variations (terminal 1.30:1,
+	   night-report 1.17:1 against the inverted body ink). rule-light is the subtle
+	   ground shade: it is light in the light variations and dark in the dark ones,
+	   so the stripe stays a quiet ground tint and body text (ink-primary) clears AA
+	   on it in every variation (worst case night-report 9.93:1). The selector matches
+	   core's own (.is-style-stripes tbody tr:nth-child(odd)); !important is required
+	   because core ships this fill at the same specificity from a later stylesheet.
+	   Borders also re-token here so the zebra rows keep a coherent hairline. */
+	.wp-block-table.is-style-stripes {
+		border-color: var(--wp--preset--color--rule-light);
+	}
+	.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+		background-color: var(--wp--preset--color--rule-light) !important;
 	}
 
 	.wp-block-navigation a:hover {
