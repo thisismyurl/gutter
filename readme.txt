@@ -2,7 +2,7 @@
 
 Contributors: thisismyurl
 Tags: blog, news, full-site-editing, block-patterns, two-columns, custom-colors, custom-logo, custom-menu, editor-style, featured-images, accessibility-ready, translation-ready, wide-blocks, sticky-post
-Tested up to: 6.8
+Tested up to: 7.1
 Requires at least: 6.5
 Requires PHP: 7.4
 Stable tag: 1.6165.1612
