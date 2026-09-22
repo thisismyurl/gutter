@@ -14,10 +14,10 @@
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3","padding":{"bottom":"var:preset|spacing|5"}},"border":{"bottom":{"color":"var:preset|color|rule","style":"solid","width":"1px"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"baseline"}} -->
 	<div class="wp-block-group" style="padding-bottom:var(--wp--preset--spacing--5);border-bottom:1px solid var(--wp--preset--color--rule)">
 		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|2xs","letterSpacing":"0.1em","textTransform":"uppercase"},"color":{"text":"var:preset|color|ink-muted"}}} -->
-		<p style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2xs);letter-spacing:0.1em;text-transform:uppercase;color:var(--wp--preset--color--ink-muted)">Research Report</p>
+		<p style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2-xs);letter-spacing:0.1em;text-transform:uppercase;color:var(--wp--preset--color--ink-muted)">Research Report</p>
 		<!-- /wp:paragraph -->
 		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|2xs"},"color":{"text":"var:preset|color|ink-muted"}}} -->
-		<p style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2xs);color:var(--wp--preset--color--ink-muted)">Q2 2026</p>
+		<p style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2-xs);color:var(--wp--preset--color--ink-muted)">Q2 2026</p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->

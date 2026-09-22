@@ -35,7 +35,7 @@
 		<!-- wp:column {"width":"22%"} -->
 		<div class="wp-block-column" style="flex-basis:22%">
 			<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|2xs","fontWeight":"500","letterSpacing":"0.12em","textTransform":"uppercase"},"color":{"text":"var:preset|color|ink-faint"}}} -->
-			<h2 style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2xs);font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--wp--preset--color--ink-faint)">Research</h2>
+			<h2 style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2-xs);font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--wp--preset--color--ink-faint)">Research</h2>
 			<!-- /wp:heading -->
 			<!-- wp:list {"className":"gutter-footer-links","style":{"spacing":{"margin":{"top":"var:preset|spacing|4"}},"typography":{"fontFamily":"var:preset|font-family|plex-sans","fontSize":"var:preset|font-size|sm","lineHeight":"2"}}} -->
 			<ul class="wp-block-list gutter-footer-links" style="margin-top:var(--wp--preset--spacing--4);font-family:var(--wp--preset--font-family--plex-sans);font-size:var(--wp--preset--font-size--sm);line-height:2">
@@ -59,7 +59,7 @@
 		<!-- wp:column {"width":"22%"} -->
 		<div class="wp-block-column" style="flex-basis:22%">
 			<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|2xs","fontWeight":"500","letterSpacing":"0.12em","textTransform":"uppercase"},"color":{"text":"var:preset|color|ink-faint"}}} -->
-			<h2 style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2xs);font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--wp--preset--color--ink-faint)">Data</h2>
+			<h2 style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2-xs);font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--wp--preset--color--ink-faint)">Data</h2>
 			<!-- /wp:heading -->
 			<!-- wp:list {"className":"gutter-footer-links","style":{"spacing":{"margin":{"top":"var:preset|spacing|4"}},"typography":{"fontFamily":"var:preset|font-family|plex-sans","fontSize":"var:preset|font-size|sm","lineHeight":"2"}}} -->
 			<ul class="wp-block-list gutter-footer-links" style="margin-top:var(--wp--preset--spacing--4);font-family:var(--wp--preset--font-family--plex-sans);font-size:var(--wp--preset--font-size--sm);line-height:2">
@@ -83,7 +83,7 @@
 		<!-- wp:column {"width":"22%"} -->
 		<div class="wp-block-column" style="flex-basis:22%">
 			<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|2xs","fontWeight":"500","letterSpacing":"0.12em","textTransform":"uppercase"},"color":{"text":"var:preset|color|ink-faint"}}} -->
-			<h2 style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2xs);font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--wp--preset--color--ink-faint)">Subscribe</h2>
+			<h2 style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2-xs);font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--wp--preset--color--ink-faint)">Subscribe</h2>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-sans","fontSize":"var:preset|font-size|sm","lineHeight":"1.65"},"color":{"text":"var:preset|color|ink-faint"},"spacing":{"margin":{"top":"var:preset|spacing|4"}}}} -->
 			<p style="margin-top:var(--wp--preset--spacing--4);font-family:var(--wp--preset--font-family--plex-sans);font-size:var(--wp--preset--font-size--sm);line-height:1.65;color:var(--wp--preset--color--ink-faint)">New research in your inbox the morning it publishes.</p>

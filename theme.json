@@ -80,6 +80,7 @@
     "typography": {
       "fluid": true,
       "customFontSize": false,
+      "defaultFontSizes": false,
       "lineHeight": true,
       "letterSpacing": true,
       "textTransform": true,
@@ -280,6 +281,7 @@
     },
     "spacing": {
       "customSpacingSize": false,
+      "defaultSpacingSizes": false,
       "spacingSizes": [
         {
           "name": "1",
@@ -420,7 +422,7 @@
       "h2": {
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--plex-serif)",
-          "fontSize": "var(--wp--preset--font-size--3xl)",
+          "fontSize": "var(--wp--preset--font-size--3-xl)",
           "fontWeight": "300",
           "lineHeight": "1.1",
           "letterSpacing": "-0.02em"
@@ -432,7 +434,7 @@
       "h3": {
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--plex-serif)",
-          "fontSize": "var(--wp--preset--font-size--2xl)",
+          "fontSize": "var(--wp--preset--font-size--2-xl)",
           "fontWeight": "400",
           "lineHeight": "1.2",
           "letterSpacing": "-0.01em"
@@ -467,7 +469,7 @@
       "h6": {
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--plex-mono)",
-          "fontSize": "var(--wp--preset--font-size--2xs)",
+          "fontSize": "var(--wp--preset--font-size--2-xs)",
           "fontWeight": "400",
           "letterSpacing": "0.12em",
           "textTransform": "uppercase"
@@ -562,7 +564,7 @@
       "core/post-terms": {
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--plex-sans)",
-          "fontSize": "var(--wp--preset--font-size--2xs)",
+          "fontSize": "var(--wp--preset--font-size--2-xs)",
           "fontWeight": "600",
           "letterSpacing": "0.1em",
           "textTransform": "uppercase"
@@ -586,7 +588,7 @@
       "core/site-tagline": {
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--plex-mono)",
-          "fontSize": "var(--wp--preset--font-size--2xs)",
+          "fontSize": "var(--wp--preset--font-size--2-xs)",
           "fontWeight": "400",
           "letterSpacing": "0.1em",
           "textTransform": "uppercase"

@@ -84,7 +84,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<figcaption style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2xs);color:var(--wp--preset--color--ink-muted)">OW = Overweight · EW = Equal Weight · UW = Underweight. For illustrative purposes only.</figcaption>
+		<figcaption style="font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2-xs);color:var(--wp--preset--color--ink-muted)">OW = Overweight · EW = Equal Weight · UW = Underweight. For illustrative purposes only.</figcaption>
 	</figure>
 	<!-- /wp:table -->
 

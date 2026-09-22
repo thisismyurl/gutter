@@ -103,7 +103,7 @@
 	<!-- /wp:html -->
 
 	<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|4"}},"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|2xs"},"color":{"text":"var:preset|color|ink-muted"}}} -->
-	<p style="margin-top:var(--wp--preset--spacing--4);font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2xs);color:var(--wp--preset--color--ink-muted)">Data for illustrative purposes only. Click or press Enter on a row to highlight it. Not investment advice.</p>
+	<p style="margin-top:var(--wp--preset--spacing--4);font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2-xs);color:var(--wp--preset--color--ink-muted)">Data for illustrative purposes only. Click or press Enter on a row to highlight it. Not investment advice.</p>
 	<!-- /wp:paragraph -->
 
 </div>

@@ -5,7 +5,7 @@ Tags: blog, news, full-site-editing, block-patterns, two-columns, custom-colors,
 Tested up to: 7.1
 Requires at least: 6.5
 Requires PHP: 7.4
-Stable tag: 1.6165.1612
+Stable tag: 1.6265.1630
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -218,6 +218,23 @@ IBM Plex Serif variable file. Fires from the asset enqueue in inc/assets.php.
     } );
 
 == Changelog ==
+
+= 1.6265.1630 =
+Synced two fixes from Colophon core (1.6265.1620), found during independent
+wp-expert reviews of Kerf and Halyard, since this theme was still running
+the pre-fix core:
+
+* inc/bindings.php now registers the {slug}/footer-credit block-bindings
+  source that parts/footer.html has bound its credit line to since the line
+  existed. The source was never registered anywhere in the collection, so
+  the credit rendered as an empty paragraph in every footer. functions.php
+  also gained the file_exists() guard on the WP-CLI require that a separate
+  regression had dropped.
+* theme.json's h1/h2 styles and five patterns (market-watch, report-cta, research-hero, sector-table, site-footer) referenced --wp--preset--font-size--2xl/--3xl directly; WordPress kebab-cases a digit-led preset slug to --2-xl/--3-xl when emitting the custom property, so those headings were silently falling back to body size. Corrected every reference.
+* settings.typography.defaultFontSizes and
+  settings.spacing.defaultSpacingSizes set to false, matching the rest of the
+  collection, so the editor's own auto-generated presets stop merging with
+  this theme's own curated set.
 
 = 1.6165.1612 =
 Accessibility (WCAG 2.1 1.4.3 — contrast, the data-table surfaces):

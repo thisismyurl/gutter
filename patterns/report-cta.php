@@ -17,11 +17,11 @@
 	<div class="wp-block-group">
 
 		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-mono","fontSize":"var:preset|font-size|2xs","fontWeight":"600","letterSpacing":"0.12em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"var:preset|spacing|4"}}},"textColor":"accent"} -->
-		<p class="has-accent-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--4);font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2xs);font-weight:600;letter-spacing:0.12em;text-transform:uppercase">Q2 2026 Outlook</p>
+		<p class="has-accent-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--4);font-family:var(--wp--preset--font-family--plex-mono);font-size:var(--wp--preset--font-size--2-xs);font-weight:600;letter-spacing:0.12em;text-transform:uppercase">Q2 2026 Outlook</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|plex-serif","fontWeight":"300","fontSize":"var:preset|font-size|2xl","letterSpacing":"-0.02em","lineHeight":"1.1"},"color":{"text":"var:preset|color|ink-deep"}}} -->
-		<h2 style="font-family:var(--wp--preset--font-family--plex-serif);font-weight:300;font-size:var(--wp--preset--font-size--2xl);letter-spacing:-0.02em;line-height:1.1;color:var(--wp--preset--color--ink-deep)">Access the full report</h2>
+		<h2 style="font-family:var(--wp--preset--font-family--plex-serif);font-weight:300;font-size:var(--wp--preset--font-size--2-xl);letter-spacing:-0.02em;line-height:1.1;color:var(--wp--preset--color--ink-deep)">Access the full report</h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|plex-sans","fontSize":"var:preset|font-size|base","lineHeight":"1.65"},"color":{"text":"var:preset|color|ink-muted"},"spacing":{"margin":{"top":"var:preset|spacing|4"}}}} -->
