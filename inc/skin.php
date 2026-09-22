@@ -16,21 +16,7 @@
  * @package gutter
  */
 
-namespace Gutter;
-
 defined( 'ABSPATH' ) || exit;
-
-// Opt this theme into GitHub-release self-updates, but only when the updater
-// actually ships. inc/github-updater.php is [REMOVABLE] and absent in the
-// WordPress.org build (functions.php loads it behind the same file_exists guard),
-// so registering the filter unconditionally would leave a live reference to a
-// file that does not exist. Guarding it here keeps the SKIN file honest: no
-// dangling hook for a feature that isn't installed.
-if ( file_exists( DIR . '/inc/github-updater.php' ) ) {
-	add_filter( 'gutter/github_updater_repo', static function (): string {
-		return 'thisismyurl/gutter';
-	} );
-}
 
 /**
  * Register Gutter's image crop sizes.
@@ -39,12 +25,12 @@ if ( file_exists( DIR . '/inc/github-updater.php' ) ) {
  * research-card: 3:2 — archive card thumbnail in the research-cards pattern.
  * report-cover: 2:3 — portrait crop for report PDF cover thumbnails.
  */
-function skin_image_sizes(): void {
+function gutter_skin_image_sizes(): void {
 	add_image_size( 'gutter-research-hero', 1360, 765, true );  // 16:9 article banner.
 	add_image_size( 'gutter-research-card', 780, 520, true );   // 3:2 archive card.
 	add_image_size( 'gutter-report-cover', 520, 780, true );    // 2:3 report cover.
 }
-add_action( 'after_setup_theme', __NAMESPACE__ . '\\skin_image_sizes' );
+add_action( 'after_setup_theme', 'gutter_skin_image_sizes' );
 
 /**
  * Preload IBM Plex Serif Light — the LCP-critical font on every Gutter page.
@@ -73,7 +59,7 @@ add_filter(
  *
  * Pillar 7 (High Agency): editors can apply these without developer help.
  */
-function skin_block_styles(): void {
+function gutter_skin_block_styles(): void {
 
 	// [SKIN] Paragraph styled as a financial data label — IBM Plex Mono, tracked,
 	// ink-faint. Used beside figures in the market-watch and key-metrics patterns.
@@ -126,7 +112,7 @@ function skin_block_styles(): void {
 		)
 	);
 }
-add_action( 'init', __NAMESPACE__ . '\\skin_block_styles' );
+add_action( 'init', 'gutter_skin_block_styles' );
 
 /**
  * Register the market-watch Interactivity API view module.
@@ -140,24 +126,24 @@ add_action( 'init', __NAMESPACE__ . '\\skin_block_styles' );
  * pre-6.5 install that slips past the "Requires at least" header: without the
  * Script Modules API the table simply stays a static, fully readable table.
  */
-function register_market_watch_view(): void {
+function gutter_register_market_watch_view(): void {
 	if ( ! function_exists( 'wp_register_script_module' ) ) {
 		return;
 	}
 
-	$path = DIR . '/assets/js/market-watch-view.js';
+	$path = GUTTER_DIR . '/assets/js/market-watch-view.js';
 	if ( ! file_exists( $path ) ) {
 		return;
 	}
 
 	wp_register_script_module(
-		SLUG . '-market-watch-view',
-		URI . '/assets/js/market-watch-view.js',
+		GUTTER_SLUG . '-market-watch-view',
+		GUTTER_URI . '/assets/js/market-watch-view.js',
 		array( '@wordpress/interactivity' ),
 		(string) filemtime( $path )
 	);
 }
-add_action( 'init', __NAMESPACE__ . '\\register_market_watch_view' );
+add_action( 'init', 'gutter_register_market_watch_view' );
 
 /**
  * Enqueue the market-watch view module only on pages that render the pattern.
@@ -170,17 +156,17 @@ add_action( 'init', __NAMESPACE__ . '\\register_market_watch_view' );
  * @param string $block_content The rendered block HTML.
  * @return string The block HTML, unchanged.
  */
-function enqueue_market_watch_view( string $block_content ): string {
+function gutter_enqueue_market_watch_view( string $block_content ): string {
 	if (
 		function_exists( 'wp_enqueue_script_module' )
 		&& false !== strpos( $block_content, 'data-wp-interactive="gutter-market-watch"' )
 	) {
-		wp_enqueue_script_module( SLUG . '-market-watch-view' );
+		wp_enqueue_script_module( GUTTER_SLUG . '-market-watch-view' );
 	}
 
 	return $block_content;
 }
-add_filter( 'render_block_core/html', __NAMESPACE__ . '\\enqueue_market_watch_view' );
+add_filter( 'render_block_core/html', 'gutter_enqueue_market_watch_view' );
 
 /**
  * Register Gutter's block pattern categories.
@@ -189,7 +175,7 @@ add_filter( 'render_block_core/html', __NAMESPACE__ . '\\enqueue_market_watch_vi
  * give them a clear home in the pattern library under "Gutter: …" rather than
  * appearing under Uncategorised.
  */
-function skin_pattern_categories(): void {
+function gutter_skin_pattern_categories(): void {
 
 	register_block_pattern_category(
 		'gutter-data',
@@ -223,4 +209,4 @@ function skin_pattern_categories(): void {
 		)
 	);
 }
-add_action( 'init', __NAMESPACE__ . '\\skin_pattern_categories' );
+add_action( 'init', 'gutter_skin_pattern_categories' );
