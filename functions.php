@@ -26,7 +26,10 @@ if ( file_exists( __DIR__ . '/inc/github-updater.php' ) ) {
 	require_once __DIR__ . '/inc/github-updater.php'; // [CORE][REMOVABLE] Remove before WP.org submission.
 }
 
-if ( defined( 'WP_CLI' ) && WP_CLI ) {
+// file_exists() guard so a WP.org distribution zip (which excludes inc/cli.php
+// via .distignore) never fatals under WP-CLI — same pattern already used for
+// inc/github-updater.php just above, applied consistently here too.
+if ( defined( 'WP_CLI' ) && WP_CLI && file_exists( __DIR__ . '/inc/cli.php' ) ) {
 	require_once __DIR__ . '/inc/cli.php'; // [CORE] wp gutter commands — CLI-only, zero front-end cost.
 }
 
